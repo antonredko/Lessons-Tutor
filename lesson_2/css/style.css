@@ -1,0 +1,24 @@
+ul{
+    color: red;
+}
+ul{
+    color: green;
+}
+.class{
+
+}
+#id{
+
+}
+*{
+    color: blue;
+}
+.list>li:nth-child(3n+1){
+    color: red;
+}
+.list>li:nth-child(3n+2){
+    color: yellow;
+}
+.list>li:nth-child(3n+3){
+    color: lime;
+}
