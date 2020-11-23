@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traffic light list</title>
+    <style>
+        .list>li:nth-child(3n+1){
+            color: red;
+        }
+        .list>li:nth-child(3n+2){
+            color: yellow;
+        }
+        .list>li:nth-child(3n+3){
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <ul>
@@ -108,5 +119,6 @@
         <li>List item 99</li>
         <li>List item 100</li>
     </ul>
+
 </body>
 </html>
