@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Logo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #fff;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+        .header_logo{
+            align-self: flex-start;
+            margin-bottom: 5px;
+            padding: 15px 100px 15px 15px;
+            background: #6b6b6b;
+        }
+        .header_navbar{
+            padding: 5px 15px;
+            background: #6b6b6b;
+        }
+        .project{
+            display: flex;
+            padding: 20px;
+            background: #6b6b6b;
+            margin-bottom: 5px;
+        }
+        .project_desc{
+            background: #b9b9b9;
+            flex-grow: 1;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            margin-right: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project_desc+div{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 2;
+        }
+        .project_feat{
+            height: 100%;
+            background: #b9b9b9;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project_next_prev{
+            background: #b9b9b9;
+            padding: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .content{
+            display: flex;
+            margin-bottom: 5px;
+        }
+        .content_part{
+            flex-grow: 1;
+            background: #6b6b6b;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            margin-right: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        .content_part:last-child{
+            margin: 0;
+        }
+        footer{
+            padding: 5px 15px;
+            background: #6b6b6b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <p>Logo</p>
+        </div>
+        <nav class="header_navbar">
+            <p>Menu</p>
+        </nav>
+    </header>
+    <div class="project">
+        <div class="project_desc">
+            <h2>Project Description</h2>
+        </div>
+        <div>
+            <div class="project_feat">
+                <h2>Featured Project</h2>
+            </div>
+            <div class="project_next_prev">
+                <h3>Previous/Next Project</h3>
+            </div>
+        </div>
+    </div>
+    <article class="content">
+        <section class="content_part">
+            <h3>Content 1</h3>
+        </section>
+        <section class="content_part">
+            <h3>Content 2</h3>
+        </section>
+        <section class="content_part">
+            <h3>Content 3</h3>
+        </section>
+    </article>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+</html>

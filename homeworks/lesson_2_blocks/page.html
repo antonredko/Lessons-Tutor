@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            max-width: 1200px;
+            height: 100vh;
+            margin: 0 auto;
+        }
+        header{
+            padding: 20px 0 50px;
+            border: 1px solid #000;
+            margin-bottom: 10px;
+        }
+        .main_title{
+            text-align: center;
+        }
+        .content{
+            display: flex;
+            justify-content: space-between;
+            height: 70%;
+            margin-bottom: 20px;
+        }
+        .content_menu_and_count{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .content_menu, .content_count, .content_main, .content_info, .content_links, .content_archive, .content_contacts{
+            padding: 20px;
+            border: 1px solid #000;
+        }
+        .content_main{
+            flex-grow: 1;
+        }
+        .content_menu_and_count, .content_main{
+            margin-right: 20px;
+        }
+        .content_menu, .content_count, .content_info, .content_links, .content_archive{
+            margin-bottom: 20px;
+        }
+        .other_content{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            border: 1px solid #000;
+        }
+    </style>
+<body>
+    <header>
+        <h1 class="main_title">Шапка сайта</h1>
+    </header>
+
+    <div class="content">
+        <aside class="content_menu_and_count">
+            <nav class="content_menu">
+                <p>Меню</p>
+            </nav>
+            <div class="content_count">
+                <p>Счетчик</p>
+            </div>
+        </aside>
+        <div class="content_main">
+            <p>Основной контент</p>
+        </div>
+        <aside class="other_content">
+            <div class="content_info">
+                <p>Доп. информация</p>
+            </div>
+            <div class="content_links">
+                <p>Полезные ссылки</p>
+            </div>
+            <div class="content_archive">
+                <p>Архив</p>
+            </div>
+            <div class="content_contacts">
+                <p>Контакты</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Низ сайта</p>
+    </footer>
+</body>
+</html>
