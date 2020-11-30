@@ -141,6 +141,7 @@ a{
     top: 50px;
     right: 50px;
     display: none;
+    z-index: 1;
 }
 .navbar_popup_list>li:not(:last-child){
     margin-bottom: 5px;
@@ -182,7 +183,6 @@ a{
     width: 50%;
     height: 200px;
     border-radius: 10px;
-    transition: .5s;
 }
 .main_content_image[align="left"]{
     margin: 0 10px 0 0;
