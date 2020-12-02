@@ -30,7 +30,11 @@ footer, header, hgroup, menu, nav, section {
 body {
     width: 100%;
     font-family: sans-serif;
-    font-size: 20px;
+    /* font-size: 18px; */
+    font-weight: 700;
+    color: #ededed;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 ol, ul {
 	list-style: none;
@@ -57,7 +61,8 @@ a, span{
 }
 .header{
     width: inherit;
-    padding: 30px 0;
+    padding: 20px 0;
+    background-color: #050201;
 }
 .container{
     width: inherit;
@@ -66,12 +71,23 @@ a, span{
 }
 .navbar, .navbar_list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+.navbar_list>li:nth-child(n + 2){
+    margin-left: 30px;
+}
+.navbar a{
+    padding: 10px 15px;
+    transition: .3s;
+}
+.navbar a:hover{
+    filter: drop-shadow(3px 3px 3px #fff);
 }
 .navbar_list li:nth-child(2) a::after{
     content: "\25BC";
     font-size: 12px;
+    margin-left: 5px;
     display: flex;
     align-items: center;
 }
