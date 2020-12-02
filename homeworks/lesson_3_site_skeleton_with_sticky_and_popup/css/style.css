@@ -123,13 +123,16 @@ a, span{
     color: red;
     text-decoration: underline;
 }
+.navbar{
+    z-index: 10000;
+}
 .navbar_list{
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
 }
-.navbar_list li{
+.navbar_list>li:last-child{
     position: relative;
 }
 .navbar_link{
@@ -172,7 +175,7 @@ a, span{
     visibility: hidden;
     opacity: 0;
     transition: .5s;
-    z-index: 100;
+    z-index: 1000;
     white-space: nowrap;
 }
 .dropmenu_link{
@@ -183,6 +186,9 @@ a, span{
 .navbar_list li:focus-within>.dropmenu{
     visibility: visible;
     opacity: 1;
+}
+.main_block{
+    z-index: 0;
 }
 .main_block>.container{
     display: flex;
@@ -231,13 +237,11 @@ a, span{
 .sidebar_list>li:not(:last-child), .other_links_list>li:not(:last-child){
     margin-bottom: 10px;
 }
-.sidebar_item, .other_links_item{
-    transition: .5s;
-}
 .sidebar_item:hover, .other_links_item:hover{
     color: red;
     text-decoration: underline;
 }
+
 .contacts_title, .partners_title{
     text-align: center;
     font-size: 26px;
@@ -292,4 +296,8 @@ a, span{
     justify-content: center;
     padding: 30px;
     font-size: 20px;
+}
+
+input[type="password"]::-ms-reveal{
+    background-color: yellow;
 }
