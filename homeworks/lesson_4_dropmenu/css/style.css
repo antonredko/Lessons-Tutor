@@ -30,7 +30,6 @@ footer, header, hgroup, menu, nav, section {
 body {
     width: 100%;
     font-family: sans-serif;
-    /* font-size: 18px; */
     font-weight: 700;
     color: #ededed;
     text-transform: uppercase;
@@ -51,7 +50,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-*{
+*, ::before, ::after{
     box-sizing: border-box;
 }
 a, span{
@@ -81,13 +80,50 @@ a, span{
     padding: 10px 15px;
     transition: .3s;
 }
-.navbar a:hover{
-    filter: drop-shadow(3px 3px 3px #fff);
+.navbar a:hover,
+.navbar a:focus-within{
+    filter: drop-shadow(0 3px 5px #fff);
 }
-.navbar_list li:nth-child(2) a::after{
+.catalog{
+    position: relative;
+}
+.catalog>a::after{
     content: "\25BC";
     font-size: 12px;
     margin-left: 5px;
     display: flex;
     align-items: center;
+}
+.dropmenu{
+    position: absolute;
+    background-color: #666;
+    background-clip: content-box;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+.catalog>.dropmenu{
+    padding-top: 20px;
+}
+.navbar_list li:hover>.dropmenu,
+.navbar_list li:focus-within>.dropmenu{
+    visibility: visible;
+    opacity: 1;
+}
+.dropmenu a{
+    width: 100%;
+}
+.dropmenu li{
+    position: relative;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.dropmenu li:last-child{
+    border-bottom: 1px solid #fff;
+}
+.dropmenu .dropmenu{
+    top: -1px;
+    left: 100%;
 }
