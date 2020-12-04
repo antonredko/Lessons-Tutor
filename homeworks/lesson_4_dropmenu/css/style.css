@@ -88,12 +88,14 @@ a, span{
 .catalog{
     position: relative;
 }
-.header .catalog>a::after{
-    content: "\25BC";
+.catalog>a::after{
     font-size: 12px;
     margin-left: 5px;
     display: flex;
     align-items: center;
+}
+.header .catalog>a::after{
+    content: "\25BC";
 }
 .header .dropmenu{
     position: absolute;
@@ -138,10 +140,6 @@ a, span{
 }
 .footer .catalog>a::after{
     content: "\25B2";
-    font-size: 12px;
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
 }
 .footer .dropmenu{
     position: absolute;
