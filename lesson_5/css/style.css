@@ -1,0 +1,190 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+a,
+span {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+  padding-bottom: 4000px;
+  background: url('../img/bg.jpg'), #50848f;
+}
+:focus{
+    outline: 2px solid red;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.imgs{
+  padding: 50px;
+  margin: 100px auto;
+}
+.img-fluid{
+  width: 100%;
+  /* max-width: 100%; */
+  display: block;
+  height: auto;
+}
+.card{
+  width: 400px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.card>img{
+  height: 400px;
+  background: #ccc;
+}
+.card>:nth-child(n+2){
+  margin-top: 20px;
+}
+.box{
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  border: 10px solid;
+  border-radius: 50%;
+  background: linear-gradient(0deg,red, blue), url('https://lh3.googleusercontent.com/proxy/Y8Yb_eMqRZRv85jiCy_5pKiC3ENl7ZarCuvXDxX19_Txg2wbh-OFBKMpbOSVerusvqhl4olCg3IT3o4tPCUu2PynnKJcYkG25BtPoS2Bc5oKJrRwZPX3318') no-repeat center / cover content-box, url('https://bipbap.ru/wp-content/uploads/2017/10/0_8eb56_842bba74_XL-640x400.jpg') no-repeat center / cover;
+}
+/* .box:hover{
+  background:  url('https://lh3.googleusercontent.com/proxy/Y8Yb_eMqRZRv85jiCy_5pKiC3ENl7ZarCuvXDxX19_Txg2wbh-OFBKMpbOSVerusvqhl4olCg3IT3o4tPCUu2PynnKJcYkG25BtPoS2Bc5oKJrRwZPX3318') no-repeat center / cover content-box, url('https://bipbap.ru/wp-content/uploads/2017/10/0_8eb56_842bba74_XL-640x400.jpg') no-repeat center / cover;;
+} */
