@@ -53,7 +53,7 @@ table {
 *, ::before, ::after{
     box-sizing: border-box;
 }
-a, span{
+a, span, ::before, ::after{
     display: inline-flex;
     text-decoration: none;
     color: inherit;
@@ -93,7 +93,6 @@ a, span{
 .catalog>a::after{
     font-size: 12px;
     margin-left: 5px;
-    display: flex;
     align-items: center;
 }
 .header .catalog>a::after{
@@ -127,9 +126,8 @@ a, span{
 }
 .dropmenu li{
     position: relative;
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border: 1px solid #fff;
+    border-bottom: none;
 }
 .dropmenu li:last-child{
     border-bottom: 1px solid #fff;
