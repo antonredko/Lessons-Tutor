@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+a,
+span {
+  display: inline-flex;
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body {
+  padding-bottom: 4000px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  /*margin: 200px auto;
+  */
+  background-color: #333;
+  font-size: 60px;
+  color: #fff;
+  /*transition: width .3s, background-color .3s .3s;
+  */ /*transform-origin: 0 0;
+  */ /*-webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  */
+  animation: a2 3s infinite linear alternate;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-animation: a2 3s infinite linear alternate;
+}
+
+@keyframes a2 {
+  100% {
+    transform: translateX(calc(100vw - 100%)) rotateZ(360deg);
+  }
+}
+
+.box:hover {
+  /* animation-play-state: paused; */
+}
+
+/* @keyframes a1 {
+  25% {
+    background-color: purple;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: blue;
+  }
+  100% {
+    width: 600px;
+    background-color: red;
+  }
+} */
+
+.section {
+  background-color: #aaa;
+  padding: 300px 0;
+}
+.skewed-section-right {
+  transform: skewY(8deg);
+}
+.skewed-section-left {
+  transform: skewY(-8deg);
+}
+.skewed-section-right > .container {
+  transform: skewY(-8deg);
+}
+.skewed-section-left > .container {
+  transform: skewY(8deg);
+}
+.section.b2 {
+  background-color: gold;
+}
