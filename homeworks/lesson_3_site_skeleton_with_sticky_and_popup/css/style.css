@@ -72,28 +72,32 @@ img{
     width: 100%;
     height: 100vh;
     color: #fff;
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/e46.webp) center / cover no-repeat #ccc;
+    background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url(../img/e46.webp) center / cover no-repeat #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .container{
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
-.header_main>.container{
+.header_main .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header_main>.container:first-child{
+.header_main_content>.container:first-child{
     padding: 30px 0;
 }
-.header_main>.container:first-child>*:nth-child(n + 2){
+.header_main_content>.container:first-child>*:nth-child(n + 2){
     margin-left: 50px;
 }
-.header_main>.container:last-child{
+.header_main>.container{
     justify-content: center;
+    margin-bottom: 50px;
 }
-.header_main>.container:last-child span{
+.header_main>.container span{
     width: 50px;
     height: 50px;
     border: 1px solid #fff;
@@ -101,7 +105,7 @@ img{
     font-size: 35px;
     justify-content: center;
 }
-.header_main>.container:last-child span:hover{
+.header_main>.container span:hover{
     border: 1px solid red;
 }
 .header_main_logo{
@@ -159,7 +163,6 @@ img{
 }
 .navbar{
     z-index: 10000;
-    /* margin-top: 30px; */
 }
 .navbar_list{
     display: flex;
