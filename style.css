@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,11 +54,33 @@ a,span{
     text-decoration: none;
     color: inherit;
 }
+.header{
+    width: 100%;
+    background-color: crimson;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.header a{
+    padding: 5px;
+    border: 1px solid rgb(0 0 0 / 0);
+    border-radius: 10px;
+    transition: .3s;
+}
+.header a::after{
+    content: "\279D";
+    margin-left: 10px;
+}
+.header a:hover, .header a:focus{
+    border: 1px solid #fff;
+}
 .title{
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
     font-weight: 700;
+    justify-self: center;
 }
 .lesson{
     padding: 20px 0 20px 100px ;
