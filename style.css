@@ -47,7 +47,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-*{
+*, ::after, ::before{
     box-sizing: border-box;
 }
 a,span{
@@ -60,6 +60,9 @@ a,span{
     background-color: crimson;
     color: #fff;
     text-align: center;
+}
+.header :focus{
+    border: 2px solid #fff;
 }
 .container{
     width: 100%;
@@ -84,7 +87,7 @@ a,span{
     align-items: center;
     justify-content: center;
 }
-.contact_with_me>*:nth-child(n + 2){
+.contact_with_me>:nth-child(n + 2){
     margin-left: 10px;
 }
 .call{
@@ -97,14 +100,11 @@ a,span{
 .social{
     padding: 5px;
     border: 2px solid rgb(0 0 0 / 0);
+    border-radius: 10px;
     transition: .3s;
 }
 .social:hover, .social:focus{
     transform: scale(1.5);
-}
-.social:focus{
-    border: 2px solid #fff;
-    border-radius: 10px;
 }
 .to_repo{
     padding: 5px;
@@ -116,7 +116,7 @@ a,span{
     content: "\279D";
     margin-left: 10px;
 }
-.to_repo:hover, .to_repo:focus{
+.to_repo:hover{
     border: 2px solid #fff;
 }
 .content{
