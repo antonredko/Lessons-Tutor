@@ -177,6 +177,7 @@ a, span, ::after, ::before{
     linear-gradient(rgb(0 0 0/50%), rgb(0 0 0/50%)),
     url(../img/hero_bgr.webp) no-repeat center / cover #2ec0be;
   padding: 296px 0;
+  box-shadow: 0px 4px 4px rgb(0 0 0/25%);
 }
 .hero_title {
   width: 60%;
@@ -191,24 +192,22 @@ a, span, ::after, ::before{
 .about{
   margin-top: -80px;
   line-height: 2.4rem;
-  display: flex;
-  flex-direction: column;
 }
 .about .container{
-  background: var(--purple);
+  background: url(../img/blob_2.webp) no-repeat 55px calc(100% + 40px), linear-gradient(var(--purple), var(--purple));
   border-radius: 40px;
-  padding: 100px 87px 315px;
+  padding: 100px 87px 354px;
   position: relative;
 }
-.about .container::after{
+/* .about .container::after{
   content: "";
   background: url(../img/blob_2.webp) no-repeat center/cover;
   width: 514px;
   height: 371px;
   position: absolute;
-  left: 60px;
-  bottom: -40px;
-}
+  left: 53px;
+  bottom: -35px;
+} */
 .about .container::before{
   content: "";
   background: url(../img/circles.webp) no-repeat center/cover;
@@ -234,6 +233,7 @@ a, span, ::after, ::before{
   letter-spacing: .25rem;
   text-transform: uppercase;
   display: flex;
+  align-items: center;
 }
 .overline_white{
   color: var(--grey);
@@ -250,7 +250,10 @@ a, span, ::after, ::before{
 .about_img{
   border-radius: 40px;
   box-shadow: var(--shadow);
-  margin-bottom: -450px;
+  margin: -320px auto 0;
   position: relative;
   z-index: 10;
+}
+.promises{
+  color: var(--black);
 }
