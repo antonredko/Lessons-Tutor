@@ -250,7 +250,7 @@ a, span, ::after, ::before{
 .about_img{
   border-radius: 40px;
   box-shadow: var(--shadow);
-  margin: -320px auto 0;
+  /* margin: -320px auto 0; */
   position: relative;
   z-index: 10;
 }
