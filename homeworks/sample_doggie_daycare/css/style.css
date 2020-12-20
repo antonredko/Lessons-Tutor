@@ -6,11 +6,15 @@
   --red: #f2726f;
   --purple: #5D62B5;
   --turquoise: #29C3BE;
+  --gradient: linear-gradient(rgb(41 195 190/70%), rgb(41 195 190/70%)), linear-gradient(rgb(93 98 181/60%), rgb(93 98 181/60%)), linear-gradient(rgb(0 0 0/20%), rgb(0 0 0/20%));
+  --font: "Roboto", system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   --weight_regular: 400;
   --weight_medium: 500;
   --weight_bold: 700;
   --weight_black: 900;
+  --border_radius: 40px;
   --shadow: 0px 16px 24px 0px rgb(38 38 38/20%);
+  --shadow_hover: 0px 16px 24px 0px rgb(0 0 0/40%);
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
   margin: 0;
@@ -30,7 +34,7 @@ html{
 body{
   color: var(--white);
   background-color: var(--light_grey);
-  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: var(--font);
   font-size: 1.6rem;
   font-weight: var(--weight_bold);
   line-height: 1;
@@ -71,6 +75,11 @@ a, span, ::after, ::before{
   max-width: 1020px;
   margin: 0 auto;
 }
+.container_wide{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .logo_and_utility{
   display: flex;
   align-items: center;
@@ -90,7 +99,7 @@ a, span, ::after, ::before{
 }
 body .btn:hover, body .btn:focus{
   background-color: red;
-  box-shadow: 0px 16px 24px 0px rgb(0 0 0/1);
+  box-shadow: var(--shadow_hover);
   animation: swing .5s linear infinite;
 }
 @keyframes swing{
@@ -120,32 +129,38 @@ body .btn:hover, body .btn:focus{
   display: flex;
   align-items: center;
 }
+.utility>:nth-child(n + 2){
+  margin-left: 30px;
+}
+.utility>:nth-child(n):not(.btn){
+  display: flex;
+}
 .utility_hours{
   font-weight: var(--weight_bold);
-  position: relative;
 }
 .utility_call{
   font-weight: var(--weight_medium);
-  position: relative;
-  margin-left: calc(30px + 24px + 10px);
+  transition: .3s;
+}
+.utility_call:hover, .utility_call:focus{
+  color: red;
 }
 .utility .icon_before::before{
-  position: absolute;
-  top: 0;
-  left: -24px;
-  margin-left: -10px;
+  margin-right: 10px;
 }
 .utility_call::before{
-  background-image: url(../img/icons/phone.svg);
+  background-image: url("../img/icons/phone.svg");
 }
 .utility_hours::before{
-  background-image: url(../img/icons/access_time.svg);
+  background-image: url("../img/icons/access_time.svg");
+}
+.utility_desc{
+  flex: 1;
 }
 .utility_desc>:first-child{
   text-transform: uppercase;
 }
 .header .btn{
-  margin-left: 30px;
   padding: 8px 34px;
 }
 .navbar{
@@ -168,23 +183,60 @@ body .btn:hover, body .btn:focus{
   padding: 9px 2px;
   align-items: center;
 }
+.navbar_links a:hover,
+.navbar_links a:focus-within{
+  color: var(--red);
+}
+.navbar_links li{
+  position: relative;
+}
 .expand_more::after{
-  background-image: url(../img/icons/expand_more.svg);
+  background-image: url("../img/icons/expand_more.svg");
 }
 .navbar_links>:nth-child(n + 2) {
   margin-left: 37px;
 }
+.dropmenu{
+  position: absolute;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow_hover);
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  z-index: 1000;
+}
+.dropmenu a{
+  width: 100%;
+  padding: 10px;
+}
+.dropmenu .icon_after::after{
+  background-image: url("../img/icons/expand_more.svg");
+  transform: rotate(-90deg);
+  margin-left: auto;
+}
+.header .dropmenu{
+  left: 0;
+  top: 100%;
+}
+.header .dropmenu .dropmenu{
+  left: 100%;
+  top: 0;
+}
+.navbar_links li:hover>.dropmenu,
+.navbar_links li:focus-within>.dropmenu{
+  visibility: visible;
+  opacity: 1;
+}
 .search_and_cart>:nth-child(n + 2) {
   margin-left: 15px;
 }
-.search span{
-  visibility: hidden;
-}
 .search::before{
-  background-image: url(../img/icons/search.svg);
+  background-image: url("../img/icons/search.svg");
 }
 .shopping_cart::before{
-  background-image: url(../img/icons/shopping_cart.svg);
+  background-image: url("../img/icons/shopping_cart.svg");
 }
 .shopping_cart{
   position: relative;
@@ -204,9 +256,7 @@ body .btn:hover, body .btn:focus{
   right: -30%;
 }
 .hero{
-  background: linear-gradient(rgb(41 195 190/80%), rgb(41 195 190/80%)),
-    linear-gradient(rgb(0 0 0/50%), rgb(0 0 0/50%)),
-    url(../img/hero_bgr.webp) no-repeat center / cover var(--turquoise);
+  background: var(--gradient), url("../img/hero_bgr.webp") no-repeat center / cover var(--turquoise);
   padding: 296px 0;
   box-shadow: 0px 4px 4px rgb(0 0 0/25%);
 }
@@ -219,23 +269,26 @@ body .btn:hover, body .btn:focus{
   margin-top: 48px;
   box-shadow: var(--shadow);
 }
-.about{
+.over{
   margin-top: -80px;
 }
-.about .container{
+.over .container{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.about .content{
-  background: url(../img/blob_about.webp) no-repeat 55px calc(100% + 40px), var(--purple);
-  border-radius: 40px;
+.over .content{
+  width: 100%;
+  border-radius: var(--border_radius);
   padding: 100px 87px 354px;
+}
+.about .content{
+  background: url("../img/blob_about.webp") no-repeat 55px calc(100% + 40px), var(--purple);
   position: relative;
 }
 .about .content::before{
   content: "";
-  background: url(../img/circles_about.webp) no-repeat center/cover;
+  background: url("../img/circles_about.webp") no-repeat center/cover;
   width: 201px;
   height: 317px;
   position: absolute;
@@ -243,9 +296,9 @@ body .btn:hover, body .btn:focus{
   right: -76px;
 }
 .title{
-  font-size: 4.2rem;
+  font-size: 3.6rem;
   font-weight: var(--weight_black);
-  line-height: 4.8rem;
+  line-height: 4.2rem;
   padding: 33px 0 36px;
 }
 .about .title{
@@ -273,34 +326,35 @@ body .btn:hover, body .btn:focus{
   color: var(--purple);
 }
 .overline_light::before{
-  background-image: url(../img/icons/overline_white.svg);
+  background-image: url("../img/icons/overline_white.svg");
 }
 .overline_purple::before{
-  background-image: url(../img/icons/overline_purple.svg);
+  background-image: url("../img/icons/overline_purple.svg");
 }
-.about_img{
-  border-radius: 40px;
+.over_img{
+  border-radius: var(--border_radius);
   box-shadow: var(--shadow);
   margin-top: -300px;
   position: relative;
-  z-index: 10;
 }
-.promises{
+.benefits{
   margin: 110px 0 122px;
 }
-.promises .title{
+.benefits .title{
   margin-bottom: 30px;
   color: var(--black);
 }
 .features{
   display: flex;
 }
-.promises .features_item{
-  position: relative;
-  margin-left: calc(30px + 63px + 23px);
+.benefits .features>:nth-child(n + 2){
+  margin-left: 30px;
 }
-.promises .features_item:first-child{
-  margin-left: calc(63px + 23px);
+.benefits .features_item{
+  display: flex;
+}
+.benefits .features_content{
+  flex: 1;
 }
 .features_item::before{
   content: "";
@@ -309,20 +363,17 @@ body .btn:hover, body .btn:focus{
   background-repeat: no-repeat;
   background-position: center;
 }
-.promises .features_item::before{
-  position: absolute;
-  top: 0;
-  left: -63px;
-  margin-left: -23px;
+.benefits .features_item::before{
+  margin-right: 23px;
 }
 .dog_love::before{
-  background-image: url(../img/icons/dog_love.svg);
+  background-image: url("../img/icons/dog_love.svg");
 }
 .dog_vet::before{
-  background-image: url(../img/icons/dog_vet.svg);
+  background-image: url("../img/icons/dog_vet.svg");
 }
 .dog_stream::before{
-  background-image: url(../img/icons/dog_stream.svg);
+  background-image: url("../img/icons/dog_stream.svg");
 }
 .features_title{
   font-weight: var(--weight_black);
@@ -335,8 +386,11 @@ body .btn:hover, body .btn:focus{
   color: var(--dark_grey);
 }
 .banner{
+  background: url("../img/blob_banner.webp") no-repeat 0 0, var(--turquoise);
+}
+.banner .container_wide{
   padding: 112px 0 169px;
-  background: url(../img/pup.webp) no-repeat 0 100%, url(../img/tennis_ball.webp) no-repeat calc(100% - 43px) 113px/136px, url(../img/line.webp) no-repeat calc(100% - 90px) 0, url(../img/blob_banner.webp) no-repeat 0 0, url(../img/circles_banner.webp) no-repeat 0 calc(100% - 60px), var(--turquoise);
+  background: url("../img/pup.webp") no-repeat 0 100%, url("../img/tennis_ball.webp") no-repeat calc(100% - 43px) 113px/136px, url("../img/line.webp") no-repeat calc(100% - 90px) 0, url("../img/circles_banner.webp") no-repeat 0 calc(100% - 60px);
 }
 .banner .container{
   display: flex;
@@ -346,22 +400,17 @@ body .btn:hover, body .btn:focus{
   width: 39%;
 }
 .banner .title{
-  font-size: 3.6rem;
-  line-height: 4.2rem;
-  padding: 0;
   margin-bottom: 45px;
 }
 .services{
   color: var(--black);
   padding: 110px 0 122px;
-  background: url(../img/blob_services.webp) no-repeat 100% 250%;
+  background: url("../img/blob_services.webp") no-repeat 100% 250%;
 }
 .services .container{
   text-align: center;
 }
 .services .title{
-  font-size: 3.6rem;
-  line-height: 4.2rem;
   margin-bottom: 30px;
   text-align: left;
 }
@@ -373,39 +422,46 @@ body .btn:hover, body .btn:focus{
 .services .features_item{
   width: 32%;
   margin-bottom: 24px;
-  padding: 50px 43.5px;
+  padding: 50px 43px;
   background-color: var(--white);
   border-radius: 20px;
   box-shadow: var(--shadow);
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+  transition: .3s;
+}
+.services .features_item:hover, .services .features_item:focus{
+  box-shadow: var(--shadow_hover);
+  transform: scale(1.1);
 }
 .services .features_item::before{
-  margin: 0 auto 33px;
+  margin-bottom: 33px;
 }
 .dog_boarding::before{
-  background-image: url(../img/icons/dog_boarding.svg);
+  background-image: url("../img/icons/dog_boarding.svg");
 }
 .dog_daycare::before{
-  background-image: url(../img/icons/dog_daycare.svg);
+  background-image: url("../img/icons/dog_daycare.svg");
 }
 .dog_grooming::before{
-  background-image: url(../img/icons/dog_grooming.svg);
+  background-image: url("../img/icons/dog_grooming.svg");
 }
 .dog_food::before{
-  background-image: url(../img/icons/dog_food.svg);
+  background-image: url("../img/icons/dog_food.svg");
 }
 .dog_training::before{
-  background-image: url(../img/icons/dog_training.svg);
+  background-image: url("../img/icons/dog_training.svg");
 }
 .dog_collar::before{
-  background-image: url(../img/icons/dog_collar.svg);
+  background-image: url("../img/icons/dog_collar.svg");
 }
 .appointment{
-  background: url(../img/blob_appointment.webp) no-repeat 23% 73%, url(../img/circles_appointment.webp) no-repeat 21% 70%, url(../img/appointment_bgr.webp) no-repeat center/cover;
+  background: var(--gradient), url("../img/appointment_bgr.webp") no-repeat center/cover, var(--turquoise);
+  text-align: center;
+}
+.appointment .container_wide{
+  background: url("../img/blob_appointment.webp") no-repeat 0 30px, url("../img/circles_appointment.webp") no-repeat 100px 275px;
   padding: 150px 0 190px;
-  position: relative;
-  z-index: 10;
 }
 .appointment .container{
   display: flex;
@@ -416,22 +472,23 @@ body .btn:hover, body .btn:focus{
   width: 60%;
   padding: 76px 57px;
   background-color: var(--purple);
-  border-radius: 40px;
+  border-radius: var(--border_radius);
   box-shadow: var(--shadow);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.appointment_form :focus{
+  outline: 2px solid var(--turquoise);
+}
 .appointment_form .title{
   width: 100%;
-  font-size: 3.6rem;
-  line-height: 4.2rem;
-  margin-bottom: 48px;
-  text-align: center;
+  margin-bottom: 43px;
+  padding: 0;
 }
 .appointment_form input, .appointment_form textarea, .appointment_form select,
 .appointment_form input::placeholder, .appointment_form textarea::placeholder{
-  font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: var(--font);
   font-size: 1.6rem;
   font-weight: var(--weight_regular);
   line-height: 2.4rem;
@@ -458,16 +515,13 @@ body .btn:hover, body .btn:focus{
 .appointment_form select{
   appearance: none;
   cursor: pointer;
-} 
+}
 .appointment_form textarea::placeholder, .appointment_form input::placeholder{
-  text-indent: 0px;
-  opacity: 1;
-  transition: text-indent .3s, opacity .3s;
+  transition: .3s;
 }
 .appointment_form textarea:focus::placeholder, .appointment_form input:focus::placeholder{
-  text-indent: 20px;
   opacity: 0;
-  transition: text-indent .3s, opacity .3s;
+  transform: translateX(20px);
 }
 .appointment_form .btn{
   box-shadow: var(--shadow);
@@ -476,7 +530,6 @@ body .btn:hover, body .btn:focus{
 }
 .stat{
   width: 35%;
-  text-align: center;
   font-weight: var(--weight_black);
 }
 .stat>:nth-child(n + 2){
@@ -489,9 +542,15 @@ body .btn:hover, body .btn:focus{
 }
 .customers_count{
   font-size: 9.6rem;
-  line-height: 5.6rem;
 }
 .served{
   font-size: 1.9rem;
   line-height: 2.6rem;
+}
+.gallery .content{
+  background-color: var(--purple);
+  position: relative;
+}
+.gallery .over_img{
+  margin-top: -360px;
 }
