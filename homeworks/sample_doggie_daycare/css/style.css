@@ -725,6 +725,9 @@ body .btn:hover, body .btn:focus{
 .footer{
   padding: 160px 0 100px;
 }
+.footer .container:not(:first-child){
+  color: var(--dark_grey);
+}
 .make_appointment{
   margin-top: -238px;
   padding: 43px 76px 46px 70px;
@@ -739,4 +742,13 @@ body .btn:hover, body .btn:focus{
   font-size: 2.4rem;
   line-height: 3rem;
   padding: 0;
+}
+
+.contacts .title{
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+}
+.contacts a{
+  
 }
