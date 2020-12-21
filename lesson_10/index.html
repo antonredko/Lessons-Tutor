@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="css/style.css" as="style">
+    <style>
+        /* cyrillic-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format("woff2");
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format("woff2");
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format("woff2");
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format("woff2");
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        /* cyrillic-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfCRc4EsA.woff2) format("woff2");
+            unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+        }
+        /* cyrillic */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfABc4EsA.woff2) format("woff2");
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+        }
+        /* greek-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfCBc4EsA.woff2) format("woff2");
+            unicode-range: U+1F00-1FFF;
+        }
+        /* greek */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfBxc4EsA.woff2) format("woff2");
+            unicode-range: U+0370-03FF;
+        }
+        /* vietnamese */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfCxc4EsA.woff2) format("woff2");
+            unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+        }
+        /* latin-ext */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfChc4EsA.woff2) format("woff2");
+            unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+        }
+        /* latin */
+        @font-face {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmYUtfBBc4.woff2) format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Doggie Daycare</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo_and_utility">
+                <a href="index.html">
+                    <img loading="lazy" src="img/logo.webp" alt="Logo of this web-site" width="170" height="40">
+                </a>
+                <div class="utility">
+                    <div class="utility_hours icon_before">
+                        <div class="utility_desc">
+                            <div>Boarding hours</div>
+                            <div>Mon - Sat: 7:00 am - 6:00 pm</div>
+                        </div>
+                    </div>
+                    <a href="tel:+380555555555" class="utility_call icon_before">
+                        <div class="utility_desc">
+                            <div>Call us</div>
+                            <div>(555) Pup-Cares</div>
+                        </div>
+                    </a>
+                    <a href="#appointment" class="btn">Make an Appointment</a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar_links">
+                    <li>
+                        <a class="expand_more icon_after" href="#">Services</a>
+                        <ul class="dropmenu">
+                            <li>
+                                <a class="icon_after" href="#">Pet Boarding</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">General Provisions</a></li>
+                                    <li><a href="#">Obligations of the Owner</a></li>
+                                    <li><a href="#">Limitations</a></li>
+                                    <li><a href="#">Owner Responsibility</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Pet Daycare</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Ear Cleaning</a></li>
+                                    <li><a href="#">Eye Care</a></li>
+                                    <li><a href="#">Filler Selection</a></li>
+                                    <li><a href="#">Nail Care</a></li>
+                                    <li><a href="#">Hair Care</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Pet Day Spa & Grooming</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Spa</a></li>
+                                    <li><a href="#">Grooming</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Pet Training</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Training Programs</a></li>
+                                    <li><a href="#">Our Dog Handlers</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Custom Meal Plans</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#benefits">Specials</a></li>
+                    <li><a href="#services">Facilities</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li>
+                        <a class="expand_more icon_after" href="#">Shop</a>
+                        <ul class="dropmenu">
+                            <li>
+                                <a class="icon_after" href="#">Feeding</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Dry Food</a></li>
+                                    <li><a href="#">Healing Feed</a></li>
+                                    <li><a href="#">Canned Food</a></li>
+                                    <li><a href="#">Milk Substitutes</a></li>
+                                    <li><a href="#">Treats and Bones</a></li>
+                                    <li><a href="#">Food Bowls</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Health</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Vitamins and Supplements</a></li>
+                                    <li><a href="#">Flea and Tick Products</a></li>
+                                    <li><a href="#">Remedies for Worms</a></li>
+                                    <li><a href="#">Protective Collars</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Care and Hygiene</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Care Products</a></li>
+                                    <li><a href="#">Diapers and Toilets</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Cosmetics</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Shampoos</a></li>
+                                    <li><a href="#">Conditioners and Sprays</a></li>
+                                    <li><a href="#">Perfumes and Colognes</a></li>
+                                    <li><a href="#">Exhibition Cosmetics</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Walking and Traveling</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Ammunition</a></li>
+                                    <li><a href="#">Roulette</a></li>
+                                    <li><a href="#">Carriers, Bags, Backpacks</a></li>
+                                    <li><a href="#">Auto Accessories</a></li>
+                                    <li><a href="#">Bike Baskets</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Care Tools</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Furminators</a></li>
+                                    <li><a href="#">Combs and Brushes</a></li>
+                                    <li><a href="#">Clippers</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Home Comfort</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Sun Beds and Mattresses</a></li>
+                                    <li><a href="#">Litter and Blankets</a></li>
+                                    <li><a href="#">Small Houses</a></li>
+                                    <li><a href="#">Cooling Mats</a></li>
+                                    <li><a href="#">Cages and Aviaries</a></li>
+                                    <li><a href="#">Steps</a></li>
+                                    <li><a href="#">Doors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="icon_after" href="#">Cleanliness in the House</a>
+                                <ul class="dropmenu">
+                                    <li><a href="#">Odor Removers</a></li>
+                                    <li><a href="#">Stain Removers</a></li>
+                                    <li><a href="#">Wool Cleaning Tools</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Tick ​​Removal Tools</a></li>
+                            <li><a href="#">Toys</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="search_and_cart">
+                    <a class="search icon_before" href="#"></a>
+                    <a class="shopping_cart icon_before" href="#">
+                        <span class="shopping_count">2</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="hero">
+        <div class="container">
+            <h1 class="hero_title">Premier dog boarding, daycare & day spa</h1>
+            <a href="#appointment" class="btn">Make an Appointment</a>
+        </div>
+    </div>
+    <div class="about over" id="about">
+        <div class="container">
+            <div class="content">
+                <h2 class="overline overline_light icon_before">Who we are</h2>
+                <h3 class="title">Nemo enim ipsam voluptatem quia voluptas in proident</h3>
+                <p class="text">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+            </div>
+            <img class="over_img" loading="lazy" src="img/about_img.webp"
+                alt="The top of the dog's brown face" width="420" height="210">
+        </div>
+    </div>
+    <div class="benefits" id="benefits">
+        <div class="container">
+            <h2 class="overline overline_purple icon_before">Our Promise to you</h2>
+            <h3 class="title">Sed perspiciatis omnis iste natus</h3>
+            <article class="features">
+                <section class="dog_love features_item">
+                    <section class="features_content">
+                        <h4 class="features_title">24/7 Love & Care</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </section>
+                </section>
+                <section class="dog_vet features_item">
+                    <section class="features_content">
+                        <h4 class="features_title">On-site Veterinarian</h4>
+                        <p class="text">Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
+                    </section>
+                </section>
+                <section class="dog_stream features_item">
+                    <section class="features_content">
+                        <h4 class="features_title">Live-stream Cameras</h4>
+                        <p class="text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur illum.</p>
+                    </section>
+                </section>
+            </article>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="container_wide">
+            <div class="container">
+                <div class="content">
+                    <h3 class="title">Nemo enim ipsam voluptatem quia voluptas in proident</h3>
+                    <a href="#appointment" class="btn">Make an Appointment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services" id="services">
+        <div class="container_wide">
+            <div class="container">
+                <h2 class="overline overline_purple icon_before">Our Services</h2>
+                <h3 class="title">Sed perspiciatis omnis iste natus</h3>
+                <article class="features">
+                    <a href="#" class="dog_boarding features_item">
+                        <h4 class="features_title">Pet Boarding (No Cages)</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </a>
+                    <a href="#" class="dog_daycare features_item">
+                        <h4 class="features_title">Pet Daycare</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </a>
+                    <a href="#" class="dog_grooming features_item">
+                        <h4 class="features_title">Pet Day Spa & Grooming</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </a>
+                    <a href="#" class="dog_food features_item">
+                        <h4 class="features_title">Custom Meal Plans</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </a>
+                    <a href="#" class="dog_training features_item">
+                        <h4 class="features_title">Pet Training</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </a>
+                    <a href="#" class="dog_collar features_item">
+                        <h4 class="features_title">Shop Our Store!</h4>
+                        <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                    </a>
+                </article>
+                <a href="#" class="btn">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="appointment" id="appointment">
+        <div class="container_wide">
+            <div class="container">
+                <form class="appointment_form" name="appointment">
+                    <h3 class="title">Make an appointment</h3>
+                    <input type="name" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="tel" placeholder="Phone Number">
+                    <select name="service">
+                        <option disabled selected>Select Service</option>
+                        <option value="boarding">Pet Boarding</option>
+                        <option value="daycare">Pet Daycare</option>
+                        <option value="spa_and_grooming">Pet Day Spa & Grooming</option>
+                        <option value="meal_plans">Custom Meal Plans</option>
+                        <option value="training">Pet Training</option>
+                        <option value="shop">Shop Our Store!</option>
+                    </select>
+                    <textarea name="message" placeholder="Tell us about your puppers include his/her name" required></textarea>
+                    <button type="reset" class="btn">Reset</button>
+                    <button type="submit" class="btn">Make an Appointment</button>
+                </form>
+                <div class="stat">
+                    <h4 class="title">Maxime placeat facere possimus omnis</h4>
+                    <p class="customers_count"><span>5,700</span>+</p>
+                    <p class="served">customers served</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery over">
+        <div class="container">
+            <div class="content">
+                <h2 class="overline overline_light icon_before">Gallery & live stream</h2>
+                <h3 class="title">Check out our hard workers</h3>
+                <ul class="tabs">
+                    <li><a href="#">Gallery</a></li>
+                    <li><a class="tab_label label_green active" href="#">Live Stream: Yard 1</a></li>
+                    <li><a class="tab_label label_green" href="#">Live Stream: Yard 2</a></li>
+                    <li><a class="tab_label label_grey" href="#">Live Stream: Yard 3</a></li>
+                </ul>
+            </div>
+            <div class="over_img">
+                <img loading="lazy" src="img/gallery/yard_1.webp" alt="Dogs bathe in the bathroom outside" width="846" height="480">
+                <span class="live">Live</span>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials" id="testimonials">
+        <div class="container_wide">
+            <div class="container">
+                <div class="titles">
+                    <h2 class="overline overline_purple icon_before">Our customers</h2>
+                    <h3 class="title">Illum qui dolorem eum quo voluptas ut distinctio</h3>
+                </div>
+                <article class="features">
+                    <section class="features_item">
+                        <p class="text">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua. Ut enim illum ad minim veniam, quis ea exercitation ullamco cillum ut enim dolore.”</p>
+                        <h4 class="features_title icon_before cullen">Cullen Bohannon</h4>
+                    </section>
+                    <section class="features_item">
+                        <p class="text">“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ipsam voluptatem aspernatur.”</p>
+                        <h4 class="features_title icon_before jennifer">Jennifer Thomas</h4>
+                    </section>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="statistics">
+        <div class="container_wide">
+            <div class="container">
+                <img loading="lazy" src="img/statistics_img.webp" alt="The dog put his head on his paws" width="498" height="315">
+                <div class="content">
+                    <h2 class="overline overline_light icon_before">Our Impact</h2>
+                    <h3 class="title">Nemo enim ipsam voluptatem quia voluptas</h3>
+                    <div class="counts">
+                        <div class="counts_item icon_before duck">
+                            <div>
+                                <p class="title"><span>3,700</span></p>
+                                <p class="counts_desc">puppy baths</p>
+                            </div>
+                        </div>
+                        <div class="counts_item icon_before house">
+                            <div>
+                                <p class="title"><span>4,500</span></p>
+                                <p class="counts_desc">dogs boarded</p>
+                            </div>
+                        </div>
+                        <div class="counts_item icon_before leash">
+                            <div>
+                                <p class="title"><span>2,900</span></p>
+                                <p class="counts_desc">pups trained</p>
+                            </div>
+                        </div>
+                        <div class="counts_item icon_before food">
+                            <div>
+                                <p class="title"><span>12</span>k+</p>
+                                <p class="counts_desc">meals served</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container make_appointment">
+            <h3 class="title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h3>
+            <a href="#appointment" class="btn">Make an Appointment</a>
+        </div>
+        <div class="container">
+            <address class="contacts">
+                <p class="title">Contacts</p>
+                <ul>
+                    <li>
+                        <a href="https://www.google.com.ua/maps/place/321+Pike+St,+Seattle,+WA+98101,+%D0%A1%D0%A8%D0%90/@47.6097514,-122.3392837,17z/data=!3m1!4b1!4m5!3m4!1s0x54906ab370b77485:0xb2aed50785b88c6e!8m2!3d47.6097478!4d-122.337095?hl=ru" target="_blank">321 Pikes Place Parkway Seattle, WA 54321</a>
+                    </li>
+                    <li></li>
+                </ul>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>
