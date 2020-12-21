@@ -318,6 +318,7 @@ body .btn:hover, body .btn:focus{
 .text{
   font-weight: var(--weight_regular);
   line-height: 2.4rem;
+  color: var(--dark_grey);
 }
 .about .text{
   color: var(--light_grey);
@@ -393,15 +394,12 @@ body .btn:hover, body .btn:focus{
   color: var(--red);
   margin-bottom: 20px;
 }
-.features .text{
-  color: var(--dark_grey);
-}
 .banner{
-  background: url("../img/blob_banner.webp") no-repeat 0 0, var(--turquoise);
+  background-color: var(--turquoise);
 }
 .banner .container_wide{
   padding: 112px 0 169px;
-  background: url("../img/pup.webp") no-repeat 0 100%, url("../img/tennis_ball.webp") no-repeat calc(100% - 43px) 113px/136px, url("../img/line.webp") no-repeat calc(100% - 90px) 0, url("../img/circles_banner.webp") no-repeat 0 calc(100% - 60px);
+  background: url("../img/pup.webp") no-repeat 0 100%, url("../img/tennis_ball.webp") no-repeat calc(100% - 43px) 113px/136px, url("../img/line.webp") no-repeat calc(100% - 90px) 0, url("../img/blob_banner.webp") no-repeat 0 0, url("../img/circles_banner.webp") no-repeat 0 calc(100% - 60px);
 }
 .banner .container{
   display: flex;
@@ -413,7 +411,7 @@ body .btn:hover, body .btn:focus{
 .banner .title{
   margin-bottom: 45px;
 }
-.services{
+.services .container_wide{
   color: var(--black);
   padding: 110px 0 122px;
   background: url("../img/blob_services.webp") no-repeat 100% 250%;
@@ -565,6 +563,21 @@ body .btn:hover, body .btn:focus{
 }
 .gallery .over_img{
   margin-top: -360px;
+  width: 846px;
+  height: 480px;
+}
+.over_img img{
+  border-radius: var(--border_radius);
+}
+.live{
+  font-weight: var(--weight_medium);
+  line-height: 2.4rem;
+  padding: 3px 19px;
+  background-color: var(--green);
+  border-radius: 50px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 .tabs{
   font-weight: var(--weight_regular);
@@ -576,6 +589,13 @@ body .btn:hover, body .btn:focus{
 .tabs a{
   padding: 15px 30px;
   position: relative;
+  transition: .3s;
+}
+.tabs a:hover, .tabs a:focus{
+  color: var(--red);
+}
+.tabs a:focus{
+  outline: 2px solid var(--red);
 }
 .tab_label::before{
   content: "";
@@ -603,4 +623,120 @@ body .btn:hover, body .btn:focus{
   position: absolute;
   bottom: -2.5px;
   left: 0;
+}
+.testimonials{
+  color: var(--black);
+}
+.testimonials .container_wide{
+  padding: 119px 0 210px;
+  background: url("../img/blob_testimonials.webp") no-repeat 0 100%;
+}
+.testimonials .container{
+  display: flex;
+}
+.testimonials .titles{
+  margin-right: 24px;
+}
+.testimonials .features_item{
+  width: 324px;
+  padding: 45px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+.testimonials .features_item:nth-child(n + 2){
+  margin-left: 24px;
+}
+.testimonials .features_item::before{
+  display: none;
+}
+.testimonials .text{
+  margin-bottom: 18px;
+}
+.testimonials .features_title{
+  font-size: 1.6rem;
+  font-weight: var(--weight_bold);
+  line-height: 2.4rem;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.testimonials .icon_before::before{
+  width: 48px;
+  height: 48px;
+  margin-right: 17px;
+}
+.cullen::before{
+  background-image: url("../img/customer_cullen.webp");
+}
+.jennifer::before{
+  background-image: url("../img/customer_jennifer.webp");
+}
+.statistics{
+  background-color: var(--turquoise);
+}
+.statistics .container_wide{
+  background: url("../img/blob_stats.webp") no-repeat 100% 0;
+  padding: 112px 0 212px;
+  position: relative;
+}
+.statistics .container>img{
+  border-radius: var(--border_radius);
+  position: absolute;
+  top: -80px;
+  right: 80px;
+}
+.statistics .content>.title{
+  width: 45%;
+  margin-bottom: 40px;
+}
+.counts{
+  display: flex;
+  justify-content: space-between;
+}
+.counts_item{
+  display: flex;
+  align-items: center;
+}
+.counts .icon_before::before{
+  width: 76px;
+  height: 76px;
+  margin-right: 11px;
+}
+.duck::before{
+  background-image: url("../img/icons/dog_ducking.svg");
+}
+.house::before{
+  background-image: url("../img/icons/dog_house.svg");
+}
+.leash::before{
+  background-image: url("../img/icons/dog_leash.svg");
+}
+.food::before{
+  background-image: url("../img/icons/dog_food_bowl.svg");
+}
+.counts_item .title{
+  padding: 0;
+  margin-bottom: 3px;
+}
+.counts_desc{
+  font-weight: var(--weight_bold);
+  color: var(--purple);
+}
+.footer{
+  padding: 160px 0 100px;
+}
+.make_appointment{
+  margin-top: -238px;
+  padding: 43px 76px 46px 70px;
+  background-color: var(--purple);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.make_appointment .title{
+  width: 60%;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  padding: 0;
 }
