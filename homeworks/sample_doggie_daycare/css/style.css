@@ -759,7 +759,6 @@ body .btn:hover, body .btn:focus{
 }
 .company{
   width: 235px;
-  margin-right: 124px;
 }
 .company>a{
   margin-bottom: 23px;
@@ -793,10 +792,10 @@ body .btn:hover, body .btn:focus{
 .explore_links{
   display: flex;
   flex-wrap: wrap;
-  margin-right: 68px;
 }
 .explore_links li{
-  width: 40%;
+  width: 159px;
+  height: 22px;
 }
 .explore_links li:nth-child(even){
   margin-right: 37px;
@@ -809,15 +808,15 @@ body .btn:hover, body .btn:focus{
   font-weight: var(--weight_regular);
   line-height: 2rem;
 }
-.contacts li:not(:last-child){
-  margin-bottom: 16px;
+.contacts li:nth-child(n + 2){
+  margin-top: 16px;
 }
 .contacts li:last-child{
   border: 2px solid rgb(0 0 0/0);
   display: flex;
   align-items: center;
 }
-.contacts li a{
+.contacts a{
   align-items: center;
   width: 100%;
 }
@@ -839,6 +838,8 @@ body .btn:hover, body .btn:focus{
 }
 .hours::before{
   background-image: url("../img/icons/timer.svg");
+  align-self: flex-start;
+  margin: 2px 0 0 2px;
 }
 .footer_bottom{
   padding: 22px 0 19px;
