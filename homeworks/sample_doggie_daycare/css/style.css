@@ -124,6 +124,8 @@ body .btn:hover, body .btn:focus{
   height: 24px;
   background-repeat: no-repeat;
   background-position: center;
+  justify-content: center;
+  align-items: center;
 }
 .utility{
   font-size: 1.2rem;
@@ -147,7 +149,9 @@ body .btn:hover, body .btn:focus{
 }
 .utility_call:hover, .utility_call:focus,
 .search:hover, .search:focus,
-.shopping_cart:hover, .shopping_cart:focus{
+.shopping_cart:hover, .shopping_cart:focus,
+.social a:hover, .social a:focus,
+.contacts a:hover, .contacts a:focus{
   border: 2px solid var(--red);
   border-radius: 5px;
   transform: scale(1.1);
@@ -190,8 +194,8 @@ body .btn:hover, body .btn:focus{
   padding: 9px 2px;
   align-items: center;
 }
-.navbar_links a:hover,
-.navbar_links a:focus-within{
+.navbar_links a:hover, .navbar_links a:focus-within,
+.contacts a:hover, .contacts a:focus{
   color: var(--red);
 }
 .navbar_links li{
@@ -239,7 +243,7 @@ body .btn:hover, body .btn:focus{
 .search_and_cart>:nth-child(n + 2) {
   margin-left: 15px;
 }
-.search, .shopping_cart{
+.search, .shopping_cart, .social a, .contacts a{
   border: 2px solid rgb(0 0 0/0);
   transition: .3s;
 }
@@ -722,14 +726,11 @@ body .btn:hover, body .btn:focus{
   font-weight: var(--weight_bold);
   color: var(--purple);
 }
-.footer{
-  padding: 160px 0 100px;
+.cta{
+  margin-top: -78px;
+  position: relative;
 }
-.footer .container:not(:first-child){
-  color: var(--dark_grey);
-}
-.make_appointment{
-  margin-top: -238px;
+.cta .container{
   padding: 43px 76px 46px 70px;
   background-color: var(--purple);
   border-radius: 20px;
@@ -737,18 +738,120 @@ body .btn:hover, body .btn:focus{
   justify-content: space-between;
   align-items: center;
 }
-.make_appointment .title{
+.cta .title{
   width: 60%;
   font-size: 2.4rem;
   line-height: 3rem;
   padding: 0;
 }
-
-.contacts .title{
+.footer{
+  font-size: 1.4rem;
+}
+.footer_top{
+  padding: 88px 0 98px;
+}
+.footer_top .container{
+  display: flex;
+  justify-content: space-between;
+}
+.footer .container{
+  color: var(--dark_grey);
+}
+.company{
+  width: 235px;
+  margin-right: 124px;
+}
+.company>a{
+  margin-bottom: 23px;
+}
+.footer .title{
+  width: 100%;
   font-size: 1.4rem;
   line-height: 2.2rem;
   text-transform: uppercase;
+  padding: 13px 0 28px;
 }
-.contacts a{
-  
+.footer .text{
+  line-height: 2.2rem;
+  margin-bottom: 33px;
+}
+.social>:nth-child(n + 2){
+  margin-left: 15px;
+}
+.facebook::before{
+  background-image: url("../img/icons/facebook.svg");
+}
+.twitter::before{
+  background-image: url("../img/icons/twitter.svg");
+}
+.instagram::before{
+  background-image: url("../img/icons/instagram.svg");
+}
+.youtube::before{
+  background-image: url("../img/icons/youtube.svg");
+}
+.explore_links{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 68px;
+}
+.explore_links li{
+  width: 40%;
+}
+.explore_links li:nth-child(even){
+  margin-right: 37px;
+}
+.contacts{
+  width: 237px;
+}
+.contacts li{
+  width: 100%;
+  font-weight: var(--weight_regular);
+  line-height: 2rem;
+}
+.contacts li:not(:last-child){
+  margin-bottom: 16px;
+}
+.contacts li:last-child{
+  border: 2px solid rgb(0 0 0/0);
+  display: flex;
+  align-items: center;
+}
+.contacts li a{
+  align-items: center;
+  width: 100%;
+}
+.contacts .icon_before::before{
+  width: 16px;
+  height: 16px;
+  margin-right: 18px;
+}
+.location::before{
+  background-image: url("../img/icons/location.svg");
+  align-self: flex-start;
+  margin: 2px 0 0 2px;
+}
+.tel::before{
+  background-image: url("../img/icons/smartphone.svg");
+}
+.mail::before{
+  background-image: url("../img/icons/email.svg");
+}
+.hours::before{
+  background-image: url("../img/icons/timer.svg");
+}
+.footer_bottom{
+  padding: 22px 0 19px;
+  background-color: var(--purple);
+  font-size: 1.2rem;
+  font-weight: var(--weight_regular);
+  line-height: 1.8rem;
+}
+.footer_bottom .container_wide{
+  display: flex;
+  justify-content: space-around;
+}
+.privacy{
+  font-weight: var(--weight_bold);
+  margin-left: 10px;
 }
