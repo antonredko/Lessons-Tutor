@@ -590,15 +590,15 @@ body .btn:hover, body .btn:focus{
   justify-content: space-between;
   border-bottom: 1px solid rgb(255 255 255/50%);
 }
-.tabs a{
+.tabs_item{
   padding: 15px 30px;
   position: relative;
   transition: .3s;
 }
-.tabs a:hover, .tabs a:focus{
+.tabs_item:hover, .tabs_item:focus{
   color: var(--red);
 }
-.tabs a:focus{
+.tabs_item:focus{
   outline: 2px solid var(--red);
 }
 .tab_label::before{
@@ -616,10 +616,10 @@ body .btn:hover, body .btn:focus{
 .label_grey::before{
   background-color: var(--grey);
 }
-.active{
+.tabs .active{
   font-weight: var(--weight_bold);
 }
-.active::after{
+.tabs .active::after{
   content: "";
   width: 100%;
   height: 4px;
@@ -646,6 +646,8 @@ body .btn:hover, body .btn:focus{
   padding: 45px;
   background-color: var(--white);
   border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .testimonials .features_item:nth-child(n + 2){
   margin-left: 24px;
@@ -654,6 +656,7 @@ body .btn:hover, body .btn:focus{
   display: none;
 }
 .testimonials .text{
+  width: 100%;
   margin-bottom: 18px;
 }
 .testimonials .features_title{
@@ -664,16 +667,8 @@ body .btn:hover, body .btn:focus{
   display: flex;
   align-items: center;
 }
-.testimonials .icon_before::before{
-  width: 48px;
-  height: 48px;
+.customer{
   margin-right: 17px;
-}
-.cullen::before{
-  background-image: url("../img/customer_cullen.webp");
-}
-.jennifer::before{
-  background-image: url("../img/customer_jennifer.webp");
 }
 .statistics{
   background-color: var(--turquoise);
@@ -759,6 +754,7 @@ body .btn:hover, body .btn:focus{
 }
 .company{
   width: 235px;
+  margin-right: 124px;
 }
 .company>a{
   margin-bottom: 23px;
@@ -790,21 +786,20 @@ body .btn:hover, body .btn:focus{
   background-image: url("../img/icons/youtube.svg");
 }
 .explore_links{
+  margin-right: 68px;
   display: flex;
-  flex-wrap: wrap;
 }
-.explore_links li{
+.explore_links a{
   width: 159px;
-  height: 22px;
 }
-.explore_links li:nth-child(even){
+/* .explore_links li:nth-child(even){
   margin-right: 37px;
-}
-.contacts{
+} */
+/* .contacts{
   width: 237px;
-}
+} */
 .contacts li{
-  width: 100%;
+  width: 236px;
   font-weight: var(--weight_regular);
   line-height: 2rem;
 }
@@ -817,18 +812,17 @@ body .btn:hover, body .btn:focus{
   align-items: center;
 }
 .contacts a{
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
 }
 .contacts .icon_before::before{
   width: 16px;
   height: 16px;
-  margin-right: 18px;
+  align-self: flex-start;
+  margin: 2px 18px 0 2px;
 }
 .location::before{
-  background-image: url("../img/icons/location.svg");
-  align-self: flex-start;
-  margin: 2px 0 0 2px;
+  background-image: url("../img/icons/location.svg"); 
 }
 .tel::before{
   background-image: url("../img/icons/smartphone.svg");
@@ -838,8 +832,6 @@ body .btn:hover, body .btn:focus{
 }
 .hours::before{
   background-image: url("../img/icons/timer.svg");
-  align-self: flex-start;
-  margin: 2px 0 0 2px;
 }
 .footer_bottom{
   padding: 22px 0 19px;
