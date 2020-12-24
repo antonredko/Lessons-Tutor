@@ -352,8 +352,12 @@ body .btn:hover, body .btn:focus{
   background-color: var(--purple);
   border-radius: var(--border_radius);
   box-shadow: var(--shadow);
-  margin-top: -300px;
   position: relative;
+}
+.benefits .over_img{
+  width: 846px;
+  height: 420px;
+  margin-top: -300px;
 }
 .benefits{
   margin: 110px 0 122px;
@@ -568,16 +572,14 @@ body .btn:hover, body .btn:focus{
   position: relative;
 }
 .gallery .over_img{
+  width: 846px;
+  height: 480px;
   margin-top: -360px;
+}
+.gallery .over_img img{
   width: 846px;
   height: 480px;
-}
-.over_img img{
   border-radius: var(--border_radius);
-}
-.gallery img{
-  width: 846px;
-  height: 480px;
 }
 .live{
   font-weight: var(--weight_medium);
@@ -679,6 +681,8 @@ body .btn:hover, body .btn:focus{
   position: relative;
 }
 .statistics .container>img{
+  width: 498px;
+  height: 315px;
   border-radius: var(--border_radius);
   position: absolute;
   top: -80px;
