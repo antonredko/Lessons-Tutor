@@ -349,14 +349,14 @@ body .btn:hover, body .btn:focus{
   background-image: url("../img/icons/overline_purple.svg");
 }
 .over_img{
+  width: 83%;
+  height: auto;
   background-color: var(--purple);
   border-radius: var(--border_radius);
   box-shadow: var(--shadow);
   position: relative;
 }
-.benefits .over_img{
-  width: 846px;
-  height: 420px;
+.about .over_img{
   margin-top: -300px;
 }
 .benefits{
@@ -571,14 +571,12 @@ body .btn:hover, body .btn:focus{
   padding-bottom: 410px;
   position: relative;
 }
-.gallery .over_img{
-  width: 846px;
-  height: 480px;
+.slider{
   margin-top: -360px;
 }
-.gallery .over_img img{
-  width: 846px;
-  height: 480px;
+.slider img{
+  width: 100%;
+  height: auto;
   border-radius: var(--border_radius);
 }
 .live{
@@ -855,3 +853,120 @@ body .btn:hover, body .btn:focus{
   font-weight: var(--weight_bold);
   margin-left: 10px;
 }
+@media screen and (max-width: 1199.98px) { 
+  .container{
+    max-width: 960px; 
+  }
+  .about .content::before{
+    right: 10px;
+  }
+  .banner .container_wide{
+    background-position-x: -70%, calc(100% - 43px), calc(100% - 90px), 0, 0;
+  }
+  .services .features_item:hover, .services .features_item:focus{
+    transform: scale(1.05);
+  }
+  .statistics .content>.title{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 991.98px) { 
+  .container{
+    max-width: 720px; 
+  }
+  .header .btn{
+    padding: 8px 15px;
+  }
+  .utility>:nth-child(n + 2){
+    margin-left: 20px;
+  }
+  .navbar_links>:nth-child(n + 2) {
+    margin-left: 20px;
+  }
+  .header .shop_menu .dropmenu .dropmenu{
+    left: -100%;
+    right: 100%;
+  }
+  .search_and_cart>:nth-child(n + 2){
+    margin-left: 10px;
+  }
+  .about .content{
+    background-position-y: calc(100% + 90px);
+  }
+  .over .content{
+    padding-bottom: 275px;
+  }
+  .about .over_img {
+    margin-top: -250px;
+  }
+  .benefits .features_item{
+    display: block;
+  }
+  .banner .container_wide{
+    padding-top: 0;
+    background-size: 68%, 80px, auto, auto, auto;
+    background-position: -170px 100%, calc(100% - 105px) 173px, 0 0, 0 0, 0 calc(100% - 60px);
+  }
+  .banner .content {
+    width: 55%;
+  }
+  .services .features_item{
+    width: 48%;
+  }
+  .appointment .container_wide{
+    padding: 100px 0 140px;
+    background-position: -30px 295px, 0 560px;
+  }
+  .appointment .container{
+    flex-direction: column-reverse;
+  }
+  .appointment_form{
+    width: 90%;
+  }
+  .stat{
+    width: 60%;
+    margin-bottom: 50px;
+  }
+  .slider {
+    margin-top: -245px;
+  }
+  .tabs_item{
+    padding: 15px 0;
+  }
+  .tab_label::before{
+    top: 10px;
+    right: -10px;
+  }
+  .testimonials .container_wide{
+    padding: 100px 0 150px;
+  }
+  .testimonials .container{
+    flex-direction: column;
+  }
+  .features{
+    justify-content: center;
+  }
+  .statistics .container_wide{
+    padding: 0 0 150px;
+  }
+  .statistics .container>img{
+    position: static;
+    margin: -100px 0 20px 20%;
+  }
+  .statistics .content>.title{
+    width: 70%;
+  }
+  .explore_links{
+    width: 130px;
+  }
+}
+@media screen and (max-width: 767.98px) { 
+  .container{
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+/* // X-Small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {  }
+/* // X-Small devices (iPhone 5,  320px) */
+@media screen and (max-width: 320px) {  }
