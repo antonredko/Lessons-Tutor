@@ -188,8 +188,8 @@ body .btn:hover, body .btn:focus{
   text-transform: uppercase;
 }
 .menu_icon{
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   margin-right: 5px;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1357,9 +1357,35 @@ body .btn:hover, body .btn:focus{
     margin-bottom: 30px;
   }
 }
-@media screen and (max-width: 375px){
-
-}
 @media screen and (max-width: 320px){
-
+  .navbar{
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 10px;
+  }
+  .hero{
+    padding-top: 300px;
+  }
+  .about .over_img{
+    margin-top: -100px;
+  }
+  .over .content{
+    padding-bottom: 110px;
+  }
+  .about .content{
+    background-position-y: calc(100% + 80px);
+  }
+  .banner .container_wide{
+    background-size: 92%, 16%, 72%, 50%, 20%;
+    background-position: -75px 100%, calc(100% - 30px) 165px, 25px 109px, 0 0, 0 calc(100% - 60px);
+  }
+  .appointment .container_wide{
+    background-position-y: 960px;
+  }
+  .slider_gallery {
+    margin-top: -115px;
+  }
+  .gallery.over .content {
+    padding-bottom: 130px;
+  }
 }
