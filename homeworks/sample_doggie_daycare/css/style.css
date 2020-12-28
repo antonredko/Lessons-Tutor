@@ -503,7 +503,8 @@ body .btn:hover, body .btn:focus{
   background-image: url("../img/icons/dog_collar.svg");
 }
 .services .slider_services{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
   display: none;
 }
 .services .slider_services a:hover, .services .slider_services a:focus{
@@ -513,8 +514,6 @@ body .btn:hover, body .btn:focus{
 .services .slider_services .features_item{
   width: 80%;
 }
-
-
 .appointment{
   background: var(--gradient), url("../img/appointment_bgr.webp") no-repeat center/cover, var(--turquoise);
   text-align: center;
