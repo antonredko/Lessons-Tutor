@@ -959,7 +959,7 @@ body .btn:hover, body .btn:focus{
   .utility>:nth-child(n + 2){
     margin-left: 20px;
   }
-  .navbar_links>:nth-child(n + 2) {
+  .navbar_links>:nth-child(n + 2){
     margin-left: 20px;
   }
   .header .shop_menu .dropmenu .dropmenu{
@@ -978,7 +978,7 @@ body .btn:hover, body .btn:focus{
   .over .content{
     padding-bottom: 275px;
   }
-  .about .over_img {
+  .about .over_img{
     margin-top: -250px;
   }
   .benefits .features_item{
@@ -989,7 +989,7 @@ body .btn:hover, body .btn:focus{
     background-size: 68%, 10%, 80%, 35%, 25%;
     background-position: -170px 100%, calc(100% - 105px) 173px, 0 0, 0 0, 0 calc(100% - 80px);
   }
-  .banner .content {
+  .banner .content{
     width: 55%;
   }
   .services .features_item{
@@ -1009,7 +1009,7 @@ body .btn:hover, body .btn:focus{
     width: 60%;
     margin-bottom: 50px;
   }
-  .slider_gallery {
+  .slider_gallery{
     margin-top: -245px;
   }
   .tabs_item{
@@ -1060,7 +1060,7 @@ body .btn:hover, body .btn:focus{
     left: auto;
     right: 0;
   }
-  .header .shop_menu .dropmenu .dropmenu {
+  .header .shop_menu .dropmenu .dropmenu{
     left: auto;
     right: calc(100% + 10px);
   }
@@ -1109,7 +1109,7 @@ body .btn:hover, body .btn:focus{
   .benefits .features>:nth-child(n + 2){
     margin: 20px 0 0;
   }
-  .banner .container_wide {
+  .banner .container_wide{
     background-size: 72%, 11%, 72%, 50%, 20%;
     background-position: 0px 100%, calc(100% - 30px) 120px, 88px 0, 0 0, 0 calc(100% - 60px);
   }
@@ -1181,7 +1181,7 @@ body .btn:hover, body .btn:focus{
   .statistics .container>img{
     margin: -80px 0 20px 0;
   }
-  .statistics .content>.title {
+  .statistics .content>.title{
     width: 100%;
     text-align: left;
     margin-bottom: 30px;
@@ -1268,7 +1268,7 @@ body .btn:hover, body .btn:focus{
   .header .shop_menu .dropmenu{
     right: 100%;
   }
-  .navbar_links .dropmenu .dropmenu {
+  .navbar_links .dropmenu .dropmenu{
     left: calc(100% + 5px);
     top: -5px;
   }
@@ -1307,7 +1307,7 @@ body .btn:hover, body .btn:focus{
   .benefits{
     margin: 80px 0;
   }
-  .banner .container_wide {
+  .banner .container_wide{
     background-size: 77%, 11%, 72%, 50%, 20%;
     background-position: -75px 100%, calc(100% - 30px) 165px, 45px 82px, 0 0, 0 calc(100% - 60px);
   }
@@ -1323,14 +1323,14 @@ body .btn:hover, body .btn:focus{
   .services .slider_services{
     display: block;
   }
-  .appointment .container_wide {
+  .appointment .container_wide{
     padding: 80px 0 120px;
     background-position-y: 840px;
   }
   .stat{
     width: 100%;
   }
-  .customers_count {
+  .customers_count{
     font-size: 8rem;
   }
   .appointment_form{
@@ -1357,13 +1357,13 @@ body .btn:hover, body .btn:focus{
   .gallery.over .content{
     padding-bottom: 155px;
   }
-  .live {
+  .live{
     line-height: 1;
     padding: 3px 10px;
     top: 10px;
     right: 10px;
   }
-  .testimonials .container_wide {
+  .testimonials .container_wide{
     padding: 80px 0 120px;
   }
   .testimonials .titles{
@@ -1375,13 +1375,13 @@ body .btn:hover, body .btn:focus{
   .testimonials .features_item{
     width: 100%;
   }
-  .testimonials .features_item:nth-child(n + 2) {
+  .testimonials .features_item:nth-child(n + 2){
     margin: 20px 0 0;
   }
   .statistics .container_wide{
     background-position: 7px 0;
   }
-  .statistics .container>img {
+  .statistics .container>img{
     width: 100%;
     height: auto;
   }
@@ -1415,7 +1415,7 @@ body .btn:hover, body .btn:focus{
   .utility_hours{
     margin-bottom: 20px;
   }
-)
+}
 @media screen and (max-width: 320px){
   .utility{
     display: block;
@@ -1442,10 +1442,10 @@ body .btn:hover, body .btn:focus{
   .appointment .container_wide{
     background-position-y: 960px;
   }
-  .slider_gallery {
+  .slider_gallery{
     margin-top: -115px;
   }
-  .gallery.over .content {
+  .gallery.over .content{
     padding-bottom: 130px;
   }
 }
