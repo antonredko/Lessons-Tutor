@@ -413,6 +413,48 @@
                         <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
                     </a>
                 </div>
+                <div class="swiper-container slider_services">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#" class="dog_boarding features_item">
+                                <h4 class="features_title">Pet Boarding (No Cages)</h4>
+                                <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="dog_daycare features_item">
+                                <h4 class="features_title">Pet Daycare</h4>
+                                <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="dog_grooming features_item">
+                                <h4 class="features_title">Pet Day Spa & Grooming</h4>
+                                <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="dog_food features_item">
+                                <h4 class="features_title">Custom Meal Plans</h4>
+                                <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="dog_training features_item">
+                                <h4 class="features_title">Pet Training</h4>
+                                <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#" class="dog_collar features_item">
+                                <h4 class="features_title">Shop Our Store!</h4>
+                                <p class="text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium corrupti quos dolores et quas.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
                 <a href="#" class="btn">Learn more</a>
             </div>
         </div>
@@ -458,7 +500,7 @@
                     <li><a class="tabs_item tab_label label_grey" href="#">Live Stream: Yard 3</a></li>
                 </ul>
             </div>
-            <div class="over_img swiper-container slider">
+            <div class="over_img swiper-container slider_gallery">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img class="img_fluid swiper-lazy" data-src="img/gallery/yard_1_1.webp" alt="Dogs bathe in the bathroom outside" width="423" height="210">
@@ -604,13 +646,21 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script>
-        const slider = new Swiper('.slider', {
+        const slider = new Swiper('.slider_gallery', {
             lazy: {
                 loadPrevNext: true,
             },
             effect: 'fade',
             fadeEffect: {
                 crossFade: true
+            },
+            loop: true,
+            grabCursor: true
+        });
+        const slider_services = new Swiper('.slider_services', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
             },
             loop: true,
             grabCursor: true

@@ -502,6 +502,19 @@ body .btn:hover, body .btn:focus{
 .dog_collar::before{
   background-image: url("../img/icons/dog_collar.svg");
 }
+.services .slider_services{
+  margin-bottom: 40px;
+  display: none;
+}
+.services .slider_services a:hover, .services .slider_services a:focus{
+  box-shadow: var(--shadow);
+  transform: scale(1);
+}
+.services .slider_services .features_item{
+  width: 80%;
+}
+
+
 .appointment{
   background: var(--gradient), url("../img/appointment_bgr.webp") no-repeat center/cover, var(--turquoise);
   text-align: center;
@@ -598,7 +611,7 @@ body .btn:hover, body .btn:focus{
   background-color: var(--purple);
   padding-bottom: 410px;
 }
-.slider{
+.slider_gallery{
   margin-top: -360px;
 }
 .img_fluid{
@@ -957,7 +970,7 @@ body .btn:hover, body .btn:focus{
     width: 60%;
     margin-bottom: 50px;
   }
-  .slider {
+  .slider_gallery {
     margin-top: -245px;
   }
   .tabs_item{
@@ -1090,7 +1103,7 @@ body .btn:hover, body .btn:focus{
   .stat>:nth-child(n + 2){
     margin-top: 30px;
   }
-  .slider{
+  .slider_gallery{
     margin-top: -170px;
   }
   .tabs{
@@ -1169,9 +1182,9 @@ body .btn:hover, body .btn:focus{
     margin-bottom: 20px;
   }
   .utility{
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
-  .utility>:nth-child(n) {
+  .utility>:nth-child(n + 2){
     margin-left: 0;
   }
   .navbar{
@@ -1209,37 +1222,140 @@ body .btn:hover, body .btn:focus{
     left: calc(100% + 5px);
     top: -5px;
   }
-  .header .shop_menu .dropmenu .dropmenu {
+  .header .shop_menu .dropmenu .dropmenu{
     left: calc(100% + 5px);
   }
-  .hero {
+  .hero{
     padding: 260px 0 180px;
   }
   .hero_title{
     width: 100%;
     font-size: 3.5rem;
   }
-  .over .content {
-    padding: 20px 20px 134px;
+  .over .content{
+    padding: 40px 20px 134px;
   }
-  .title {
+  .title{
     padding: 20px 0;
     font-size: 2.5rem;
     line-height: 3rem;
   }
-  .text {
+  .text{
     font-size: 1.4rem;
     line-height: 2rem;
   }
-  .over_img {
+  .over_img{
     width: 94%;
   }
   .about .over_img{
     margin-top: -120px;
   }
-  .about .content {
+  .about .content{
     background-size: contain;
     background-position: -25px calc(100% + 90px);
+  }
+  .benefits{
+    margin: 80px 0;
+  }
+  .banner .container_wide {
+    background-size: 77%, 11%, 72%, 50%, 20%;
+    background-position: -75px 100%, calc(100% - 30px) 165px, 45px 82px, 0 0, 0 calc(100% - 60px);
+  }
+  .banner .content{
+    width: 100%;
+  }
+  .services .container_wide{
+    padding: 80px 0;
+  }
+  .services .features{
+    display: none;
+  }
+  .services .slider_services{
+    display: block;
+  }
+  .appointment .container_wide {
+    padding: 80px 0 120px;
+    background-position-y: 840px;
+  }
+  .stat{
+    width: 100%;
+  }
+  .customers_count {
+    font-size: 8rem;
+  }
+  .appointment_form{
+    padding: 40px 20px;
+  }
+  .appointment_form input, .appointment_form select{
+    width: 100%;
+  }
+  .appointment_form .btn{
+    margin: 0 auto;
+  }
+  .appointment_form .btn[type="reset"]{
+    margin-bottom: 20px;
+  }
+  .slider_gallery{
+    margin-top: -140px;
+  }
+  .tabs{
+    justify-content: center;
+  }
+  .tabs>:last-child{
+    margin: 0;
+  }
+  .gallery.over .content{
+    padding-bottom: 155px;
+  }
+  .live {
+    line-height: 1;
+    padding: 3px 10px;
+    top: 10px;
+    right: 10px;
+  }
+  .testimonials .container_wide {
+    padding: 80px 0 120px;
+  }
+  .testimonials .titles{
+    margin: 0 0 20px;
+  }
+  .testimonials .features{
+    flex-direction: column;
+  }
+  .testimonials .features_item{
+    width: 100%;
+  }
+  .testimonials .features_item:nth-child(n + 2) {
+    margin: 20px 0 0;
+  }
+  .statistics .container_wide{
+    background-position: 7px 0;
+  }
+  .statistics .container>img {
+    width: 100%;
+    height: auto;
+  }
+  .counts .icon_before::before{
+    width: 45px;
+    height: 45px;
+    margin-right: 5px;
+    background-size: cover;
+  }
+  .cta .container{
+    padding: 30px 20px;
+    flex-direction: column;
+  }
+  .cta .title{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer_top .container{
+    flex-direction: column;
+  }
+  .company{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 375px){
