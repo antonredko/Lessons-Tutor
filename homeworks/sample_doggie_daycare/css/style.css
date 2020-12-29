@@ -198,7 +198,6 @@ body .btn:hover, body .btn:focus{
   text-transform: uppercase;
 }
 .menu .dropmenu{
-  /* width: 200px; */
   padding: 10px 20px;
   letter-spacing: 1.5px;
 }
