@@ -194,12 +194,16 @@ body .btn:hover, body .btn:focus{
   align-items: center;
   color: var(--black);
   position: relative;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
 }
 .menu .dropmenu{
-  width: 200px;
-  padding: 10px;
+  /* width: 200px; */
+  padding: 10px 20px;
+  letter-spacing: 1.5px;
+}
+.menu .dropmenu>:nth-child(n + 2){
+  margin-top: 10px;
 }
 .logo_and_menu .search_and_cart{
   display: none;
