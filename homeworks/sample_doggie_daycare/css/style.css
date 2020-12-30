@@ -213,6 +213,9 @@ body .btn:hover, body .btn:focus{
 .burger{
   padding: 0 3px;
   border-radius: 5px;
+  background-color: var(--white);
+  cursor: pointer;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -262,7 +265,8 @@ body .btn:hover, body .btn:focus{
 .menu a:hover, .menu a:focus,
 .tabs_item:hover, .tabs_item:focus,
 .contacts a:hover, .contacts a:focus,
-.explore_links a:hover, .explore_links a:focus{
+.explore_links a:hover, .explore_links a:focus,
+.privacy_and_terms a:hover, .privacy_and_terms a:focus{
   color: var(--red);
 }
 .navbar_links li{
@@ -853,20 +857,15 @@ body .btn:hover, body .btn:focus{
   line-height: 2.2rem;
   margin-bottom: 33px;
 }
+.social{
+  display: flex;
+}
+.social a{
+  width: 24px;
+  height: 24px;
+}
 .social>:nth-child(n + 2){
   margin-left: 15px;
-}
-.facebook::before{
-  background-image: url("../img/icons/facebook.svg");
-}
-.twitter::before{
-  background-image: url("../img/icons/twitter.svg");
-}
-.instagram::before{
-  background-image: url("../img/icons/instagram.svg");
-}
-.youtube::before{
-  background-image: url("../img/icons/youtube.svg");
 }
 .explore_links{
   width: 356px;
@@ -930,10 +929,22 @@ body .btn:hover, body .btn:focus{
 .footer_bottom .container_wide{
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
-.privacy{
+.copy_and_links{
+  display: flex;
+  align-items: center;
+}
+.privacy_and_terms{
   font-weight: var(--weight_bold);
   margin-left: 10px;
+}
+.privacy_and_terms a{
+  border: 2px solid rgb(0 0 0/0);
+  transition: .3s;
+}
+.privacy_and_terms a:focus{
+  outline: 2px solid var(--red);
 }
 @media screen and (max-width: 1199.98px){ 
   .container{
@@ -1046,7 +1057,7 @@ body .btn:hover, body .btn:focus{
   }
 }
 @media screen and (max-width: 767.98px){ 
-  .container{
+  .container, .container_wide{
     max-width: 100%;
     padding: 0 15px;
   }
@@ -1214,6 +1225,9 @@ body .btn:hover, body .btn:focus{
   }
 }
 @media screen and (max-width: 575.98px){
+  :root{
+    --border_radius: 20px;
+  }
   .logo_and_menu{
     justify-content: space-between;
     margin-bottom: 30px;
@@ -1337,16 +1351,30 @@ body .btn:hover, body .btn:focus{
     font-size: 8rem;
   }
   .appointment_form{
-    padding: 40px 20px;
+    padding: 30px 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .appointment_form .title{
+    margin-bottom: 30px;
   }
   .appointment_form input, .appointment_form select{
     width: 100%;
+    margin-bottom: 15px;
   }
-  .appointment_form .btn{
-    margin: 0 auto;
+  .appointment_form input, .appointment_form textarea, .appointment_form select {
+    border-radius: 8px;
+    padding: 10px 15px;
+  }
+  .appointment_form textarea{
+    margin-bottom: 20px;
+  }
+  .appointment_form input, .appointment_form textarea, .appointment_form select, .appointment_form input::placeholder, .appointment_form textarea::placeholder{
+    line-height: 2rem;
   }
   .appointment_form .btn[type="reset"]{
-    margin-bottom: 20px;
+    order: 10;
+    margin-top: 20px;
   }
   .slider_gallery{
     margin-top: -140px;
@@ -1411,6 +1439,22 @@ body .btn:hover, body .btn:focus{
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 415px){
+  .about .content {
+    background-position-y: calc(100% + 125px);
+  }
+  .over .content {
+    padding-bottom: 160px;
+  }
+  .banner .container_wide {
+    background-size: 67%, 11%, 72%, 50%, 20%;
+    background-position: -38px 100%, calc(100% - 30px) 145px, 55px 55px, 0 0, 0 calc(100% - 60px);
+  }
+  .tabs{
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 375px){
   .utility{
     justify-content: center;
@@ -1420,6 +1464,16 @@ body .btn:hover, body .btn:focus{
   }
   .utility_hours{
     margin-bottom: 20px;
+  }
+  .about .content{
+    background-position-y: calc(100% + 105px);
+  }
+  .over .content{
+    padding-bottom: 150px;
+  }
+  .banner .container_wide{
+    background-size: 73%, 11%, 72%, 50%, 20%;
+    background-position: -40px 100%, calc(100% - 30px) 145px, 49px 62px, 0 0, 0 calc(100% - 60px);
   }
 }
 @media screen and (max-width: 320px){

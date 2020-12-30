@@ -160,11 +160,11 @@
             <div class="logo_and_utility">
                 <div class="logo_and_menu">
                     <div class="menu">
-                        <a class="burger" href="#">
+                        <button class="burger">
                             <span class="burger_icon">
                                 <span></span>
                             </span>
-                        </a>
+                        </button>
                         <ul class="dropmenu">
                             <li><a href="#services">Services</a></li>
                             <li><a href="#benefits">Specials</a></li>
@@ -614,10 +614,18 @@
                     <a href="index.html"><img src="img/logo_black.webp" alt="Black logo of this company" width="174" height="39"></a>
                     <p class="text">This is a blurb about the company sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua.</p>
                     <div class="social">
-                        <a class="icon_before facebook" href="https://www.facebook.com/" target="_blank" rel="noopener"></a>
-                        <a class="icon_before twitter" href="https://twitter.com/" target="_blank" rel="noopener"></a>
-                        <a class="icon_before instagram" href="https://www.instagram.com/" target="_blank" rel="noopener"></a>
-                        <a class="icon_before youtube" href="https://www.youtube.com/" target="_blank" rel="noopener"></a>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                            <img class="img_fluid" src="img/icons/facebook.svg" alt="Logo of Facebook" width="20" height="20">
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener">
+                            <img class="img_fluid" src="img/icons/twitter.svg" alt="Logo of Twitter" width="20" height="20">
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <img class="img_fluid" src="img/icons/instagram.svg" alt="Logo of Instagram" width="20" height="20">
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+                            <img class="img_fluid" src="img/icons/youtube.svg" alt="Logo of Youtube" width="20" height="20">
+                        </a>
                     </div>
                 </div>
                 <div class="explore_links">
@@ -647,7 +655,14 @@
         <div class="footer_bottom">
             <div class="container_wide">
                 <p>Tagline lorem ipsum dolor sit amet, consectetur adipiscing eiusmod</p>
-                <p>&copy; 2018 Company.<span class="privacy">Privacy Policy | Terms & Conditions</span></p>
+                <div class="copy_and_links">
+                    <p>&copy; 2018 Company.</p>
+                    <p class="privacy_and_terms">
+                        <a href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" rel="noopener">Privacy Policy</a>
+                        |
+                        <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank" rel="noopener">Terms & Conditions</a>
+                    </p>
+                </div>
             </div>
         </div>
     </footer>
