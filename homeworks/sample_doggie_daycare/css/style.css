@@ -962,6 +962,9 @@ body .btn:hover, body .btn:focus{
   .statistics .content>.title{
     width: 40%;
   }
+  .appointment .container_wide{
+    background-position: -200px 10px, 0px 325px;
+  }
 }
 @media screen and (max-width: 991.98px){ 
   .container{
@@ -1160,7 +1163,8 @@ body .btn:hover, body .btn:focus{
     margin-top: -170px;
   }
   .tabs{
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     border: none;
   }
   .tabs li{
@@ -1200,6 +1204,10 @@ body .btn:hover, body .btn:focus{
     text-align: left;
     margin-bottom: 30px;
   }
+  .statistics .container_wide{
+    background-size: 100%;
+    background-position: -4px 0px;
+  }
   .counts{
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -1220,7 +1228,7 @@ body .btn:hover, body .btn:focus{
     display: none;
   }
   .footer_bottom .container_wide{
-    display: block;
+    flex-direction: column;
     text-align: center;
   }
 }
@@ -1319,14 +1327,14 @@ body .btn:hover, body .btn:focus{
   }
   .about .content{
     background-size: contain;
-    background-position: -25px calc(100% + 90px);
+    background-position: -25px calc(100% + 117px);
   }
   .benefits{
     margin: 80px 0;
   }
   .banner .container_wide{
-    background-size: 77%, 11%, 72%, 50%, 20%;
-    background-position: -75px 100%, calc(100% - 30px) 165px, 45px 82px, 0 0, 0 calc(100% - 60px);
+    background-size: 69%, 11%, 72%, 50%, 28%;
+    background-position: -27px 100%, calc(100% - 30px) 153px, 56px 68px, 0 0, 0 calc(100% - 60px);
   }
   .banner .content{
     width: 100%;
@@ -1342,7 +1350,7 @@ body .btn:hover, body .btn:focus{
   }
   .appointment .container_wide{
     padding: 80px 0 120px;
-    background-position-y: 840px;
+    background-position-y: 665px;
   }
   .stat{
     width: 100%;
@@ -1420,7 +1428,7 @@ body .btn:hover, body .btn:focus{
     width: 45px;
     height: 45px;
     margin-right: 5px;
-    background-size: cover;
+    background-size: contain;
   }
   .cta .container{
     padding: 30px 20px;
@@ -1438,17 +1446,23 @@ body .btn:hover, body .btn:focus{
     text-align: center;
     margin-bottom: 30px;
   }
+  .social{
+    justify-content: center;
+  }
 }
-@media screen and (max-width: 415px){
+@media screen and (max-width: 414px){
   .about .content {
-    background-position-y: calc(100% + 125px);
+    background-position-y: calc(100% + 100px);
   }
   .over .content {
-    padding-bottom: 160px;
+    padding-bottom: 140px;
   }
   .banner .container_wide {
-    background-size: 67%, 11%, 72%, 50%, 20%;
-    background-position: -38px 100%, calc(100% - 30px) 145px, 55px 55px, 0 0, 0 calc(100% - 60px);
+    background-size: 76%, 13%, 72%, 60%, 30%;
+    background-position: -38px 100%, calc(100% - 30px) 165px, 41px 86px, 0 0, 0 calc(100% - 60px);
+  }
+  .appointment .container_wide {
+    background-position-y: 700px;
   }
   .tabs{
     flex-direction: column;
@@ -1465,15 +1479,37 @@ body .btn:hover, body .btn:focus{
   .utility_hours{
     margin-bottom: 20px;
   }
+  .appointment .container_wide {
+    background-position-y: 817px;
+  }
   .about .content{
-    background-position-y: calc(100% + 105px);
+    background-position-y: calc(100% + 80px);
   }
   .over .content{
-    padding-bottom: 150px;
+    padding-bottom: 110px;
   }
-  .banner .container_wide{
-    background-size: 73%, 11%, 72%, 50%, 20%;
-    background-position: -40px 100%, calc(100% - 30px) 145px, 49px 62px, 0 0, 0 calc(100% - 60px);
+  .about .over_img {
+    margin-top: -100px;
+  }
+  .banner .container_wide {
+    background-size: 90%, 15%, 85%, 76%, 37%;
+    background-position: -76px 100%, calc(100% - 16px) 169px, 0px 93px, 0 0, 0 calc(100% - 60px);
+  }
+  .gallery.over .content {
+    padding-bottom: 130px;
+  }
+  .slider_gallery {
+    margin-top: -115px;
+  }
+  .statistics .container_wide {
+    background-position: 0 0;
+  }
+  .copy_and_links{
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .privacy_and_terms{
+    margin: 0;
   }
 }
 @media screen and (max-width: 320px){
@@ -1495,12 +1531,8 @@ body .btn:hover, body .btn:focus{
   .about .content{
     background-position-y: calc(100% + 80px);
   }
-  .banner .container_wide{
-    background-size: 92%, 16%, 72%, 50%, 20%;
-    background-position: -75px 100%, calc(100% - 30px) 165px, 25px 109px, 0 0, 0 calc(100% - 60px);
-  }
   .appointment .container_wide{
-    background-position-y: 960px;
+    background-position-y: 824px;
   }
   .slider_gallery{
     margin-top: -115px;
