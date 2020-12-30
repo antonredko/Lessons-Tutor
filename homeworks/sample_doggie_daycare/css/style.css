@@ -1492,8 +1492,8 @@ body .btn:hover, body .btn:focus{
     margin-top: -100px;
   }
   .banner .container_wide {
-    background-size: 90%, 15%, 85%, 76%, 37%;
-    background-position: -76px 100%, calc(100% - 16px) 169px, 0px 93px, 0 0, 0 calc(100% - 60px);
+    background-size: 280px, 53px, 85%, 76%, 37%;
+    background-position: -76px 100%, calc(100% - 28px) 147px, 0px 69px, 0 0, 0 calc(100% - 60px);
   }
   .gallery.over .content {
     padding-bottom: 130px;
@@ -1512,7 +1512,7 @@ body .btn:hover, body .btn:focus{
     margin: 0;
   }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 321px){
   .utility{
     display: block;
   }
@@ -1539,5 +1539,13 @@ body .btn:hover, body .btn:focus{
   }
   .gallery.over .content{
     padding-bottom: 130px;
+  }
+  .banner .container_wide {
+    background-size: 280px, 50px, 85%, 76%, 37%;
+    background-position: -76px 100%, calc(100% - 13px) 164px, 0px 87px, 0 0, 0 calc(100% - 60px);
+  }
+  .counts{
+    flex-direction: column;
+    align-items: center;
   }
 }
