@@ -1469,7 +1469,7 @@ body .btn:hover, body .btn:focus{
     align-items: center;
   }
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 376px){
   .utility{
     justify-content: center;
   }
