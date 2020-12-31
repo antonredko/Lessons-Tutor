@@ -4,7 +4,7 @@
   --light_grey: #f5f5f5;
   --grey: #D5D5D5;
   --dark_grey: #4B4B4B;
-  --red: #000;
+  --red: #f2726f;
   --purple: #5D62B5;
   --turquoise: #29C3BE;
   --green: #62B58F;
@@ -673,7 +673,7 @@ body .btn:hover, body .btn:focus{
   font-weight: var(--weight_medium);
   line-height: 2.4rem;
   padding: 3px 19px;
-  background-color: green;
+  background-color: var(--green);
   border-radius: 50px;
   position: absolute;
   top: 30px;
