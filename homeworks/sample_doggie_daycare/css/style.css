@@ -67,6 +67,10 @@ a, span, ::after, ::before{
 :focus{
   outline: 2px solid var(--purple);
 }
+.label_hidden{
+  font-size: 0;
+  letter-spacing: 0;
+}
 .header{
   width: 100%;
   position: absolute;
@@ -1055,6 +1059,18 @@ body .btn:hover, body .btn:focus{
   .statistics .content>.title{
     width: 70%;
   }
+  .counts{
+    justify-content: space-evenly;
+  }
+  .counts_item{
+    flex-direction: column;
+  }
+  .counts_item>div{
+    text-align: center;
+  }
+  .counts .icon_before::before{
+    margin-right: 0;
+  }
   .explore_links{
     width: 130px;
   }
@@ -1208,10 +1224,6 @@ body .btn:hover, body .btn:focus{
     background-size: 100%;
     background-position: -4px 0px;
   }
-  .counts{
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
   .counts_item{
     margin-bottom: 20px;
   }
@@ -1326,8 +1338,7 @@ body .btn:hover, body .btn:focus{
     margin-top: -120px;
   }
   .about .content{
-    background-size: contain;
-    background-position: -25px calc(100% + 117px);
+    background-size: 0;
   }
   .benefits{
     margin: 80px 0;
@@ -1424,6 +1435,13 @@ body .btn:hover, body .btn:focus{
     width: 100%;
     height: auto;
   }
+  .counts{
+    flex-direction: column;
+  }
+  .counts_item{
+    flex-direction: row;
+    justify-content: center;
+  }
   .counts .icon_before::before{
     width: 45px;
     height: 45px;
@@ -1451,9 +1469,6 @@ body .btn:hover, body .btn:focus{
   }
 }
 @media screen and (max-width: 414px){
-  .about .content {
-    background-position-y: calc(100% + 100px);
-  }
   .over .content {
     padding-bottom: 140px;
   }
@@ -1469,7 +1484,7 @@ body .btn:hover, body .btn:focus{
     align-items: center;
   }
 }
-@media screen and (max-width: 376px){
+@media screen and (max-width: 375px){
   .utility{
     justify-content: center;
   }
@@ -1481,9 +1496,6 @@ body .btn:hover, body .btn:focus{
   }
   .appointment .container_wide {
     background-position-y: 817px;
-  }
-  .about .content{
-    background-position-y: calc(100% + 80px);
   }
   .over .content{
     padding-bottom: 110px;
@@ -1512,7 +1524,7 @@ body .btn:hover, body .btn:focus{
     margin: 0;
   }
 }
-@media screen and (max-width: 321px){
+@media screen and (max-width: 320px){
   .utility{
     display: block;
   }
@@ -1527,9 +1539,6 @@ body .btn:hover, body .btn:focus{
   }
   .over .content{
     padding-bottom: 110px;
-  }
-  .about .content{
-    background-position-y: calc(100% + 80px);
   }
   .appointment .container_wide{
     background-position-y: 824px;

@@ -152,6 +152,7 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We provide services for the daily care of your pet. We will also help keep your pet in good health.">
     <title>Sample Doggie Daycare</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -330,7 +331,9 @@
                     <li><a href="#about">About</a></li>
                 </ul>
                 <div class="search_and_cart">
-                    <a class="search icon_before" href="#"></a>
+                    <a class="search icon_before" id="search_button" href="#">
+                        <label class="label_hidden">Button to show the search form</label>
+                    </a>
                     <a class="shopping_cart icon_before" href="#">
                         <span class="shopping_count">2</span>
                     </a>
@@ -472,10 +475,13 @@
             <div class="container">
                 <form class="appointment_form" name="appointment">
                     <h3 class="title">Make an appointment</h3>
-                    <input type="name" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="tel" placeholder="Phone Number">
-                    <select name="service">
+                    <input id="name_field" type="name" name="name" placeholder="Name" required>
+                    <label for="name_field" class="label_hidden">Field to enter a name</label>
+                    <input id="email_field" type="email" name="email" placeholder="Email" required>
+                    <label for="email_field" class="label_hidden">Field to enter an email</label>
+                    <input id="phone_field" type="tel" name="tel" placeholder="Phone Number">
+                    <label for="phone_field" class="label_hidden">Field to enter a phone number</label>
+                    <select id="select_service" name="service">
                         <option disabled selected>Select Service</option>
                         <option value="boarding">Pet Boarding</option>
                         <option value="daycare">Pet Daycare</option>
@@ -484,7 +490,9 @@
                         <option value="training">Pet Training</option>
                         <option value="shop">Shop Our Store!</option>
                     </select>
-                    <textarea name="message" placeholder="Tell us about your puppers include his/her name" required></textarea>
+                    <label for="select_service" class="label_hidden">Select the service you want to get</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your puppers include his/her name" required></textarea>
+                    <label for="message" class="label_hidden">Field to enter your message</label>
                     <button type="reset" class="btn">Reset</button>
                     <button type="submit" class="btn">Make an Appointment</button>
                 </form>
