@@ -10,9 +10,9 @@ const slider = new Swiper('.slider_gallery', {
     grabCursor: true
 });
 const slider_services = new Swiper('.slider_services', {
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets'
     },
     loop: true,
     grabCursor: true
