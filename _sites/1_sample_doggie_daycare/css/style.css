@@ -67,10 +67,6 @@ a, span, ::after, ::before{
 :focus{
   outline: 2px solid var(--purple);
 }
-.label_hidden{
-  font-size: 0;
-  letter-spacing: 0;
-}
 .header{
   width: 100%;
   position: absolute;
