@@ -162,11 +162,10 @@
             <div class="logo_and_utility">
                 <div class="logo_and_menu">
                     <div class="menu">
-                        <button class="burger">
+                        <button class="burger" aria-label="Button to show the navbar on phones">
                             <span class="burger_icon">
                                 <span></span>
                             </span>
-                            <label class="label_hidden">Button to show the navbar on phones</label>
                         </button>
                         <ul class="dropmenu">
                             <li><a href="#services">Services</a></li>
@@ -182,8 +181,7 @@
                         <img class="img_fluid" loading="lazy" src="img/logo.webp" alt="Logo of this company" width="85" height="20">
                     </a>
                     <div class="search_and_cart">
-                        <a class="search icon_before" href="#">
-                            <label class="label_hidden">Button to show the search form</label>
+                        <a class="search icon_before" href="#" aria-label="Button to show the search form">
                         </a>
                         <a class="shopping_cart icon_before" href="#">
                             <span class="shopping_count">2</span>
@@ -334,8 +332,7 @@
                     <li><a href="#about">About</a></li>
                 </ul>
                 <div class="search_and_cart">
-                    <a class="search icon_before" href="#">
-                        <label class="label_hidden">Button to show the search form</label>
+                    <a class="search icon_before" href="#" aria-label="Button to show the search form">
                     </a>
                     <a class="shopping_cart icon_before" href="#">
                         <span class="shopping_count">2</span>
@@ -478,13 +475,10 @@
             <div class="container">
                 <form class="appointment_form" name="appointment">
                     <h3 class="title">Make an appointment</h3>
-                    <input id="name_field" type="name" name="name" placeholder="Name" required>
-                    <label for="name_field" class="label_hidden">Field to enter a name</label>
-                    <input id="email_field" type="email" name="email" placeholder="Email" required>
-                    <label for="email_field" class="label_hidden">Field to enter an email</label>
-                    <input id="phone_field" type="tel" name="tel" placeholder="Phone Number">
-                    <label for="phone_field" class="label_hidden">Field to enter a phone number</label>
-                    <select id="select_service" name="service">
+                    <input id="name_field" type="name" name="name" placeholder="Name" aria-label="Field to enter a name" required>
+                    <input id="email_field" type="email" name="email" placeholder="Email" aria-label="Field to enter an email" required>
+                    <input id="phone_field" type="tel" name="tel" placeholder="Phone Number" aria-label="Field to enter a phone number">
+                    <select id="select_service" name="service" aria-label="Select the service you want to get">
                         <option disabled selected>Select Service</option>
                         <option value="boarding">Pet Boarding</option>
                         <option value="daycare">Pet Daycare</option>
@@ -493,9 +487,7 @@
                         <option value="training">Pet Training</option>
                         <option value="shop">Shop Our Store!</option>
                     </select>
-                    <label for="select_service" class="label_hidden">Select the service you want to get</label>
-                    <textarea id="message" name="message" placeholder="Tell us about your puppers include his/her name" required></textarea>
-                    <label for="message" class="label_hidden">Field to enter your message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your puppers include his/her name" aria-label="Tell us about your puppers include his/her name" required></textarea>
                     <button type="reset" class="btn">Reset</button>
                     <button type="submit" class="btn">Make an Appointment</button>
                 </form>
