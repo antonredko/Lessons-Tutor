@@ -56,8 +56,11 @@ body{
     background-color: var(--accent_yellow);
     padding: .9rem 1rem;
 }
+.ready_business{
+    margin-top: 3.2rem;
+}
 .h1{
-    margin: 3.2rem 0 2.4rem;
+    margin-bottom: 2.4rem;
     font-size: 3rem;
     line-height: 3.2rem;
     font-weight: 600;
@@ -75,4 +78,5 @@ body{
 }
 .price{
     background-color: var(--black);
+    padding: 1.6rem 0 2.5rem;
 }
