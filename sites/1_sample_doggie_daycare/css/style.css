@@ -4,10 +4,10 @@
   --light_grey: #f5f5f5;
   --grey: #D5D5D5;
   --dark_grey: #4B4B4B;
-  --red: #f2726f;
+  --red: black;
   --purple: #5D62B5;
   --turquoise: #29C3BE;
-  --green: #62B58F;
+  --green: green;
   --gradient: linear-gradient(rgb(41 195 190/70%), rgb(41 195 190/70%)), linear-gradient(rgb(93 98 181/60%), rgb(93 98 181/60%)), linear-gradient(rgb(0 0 0/20%), rgb(0 0 0/20%));
   --font: "Roboto", system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   --weight_regular: 400;
