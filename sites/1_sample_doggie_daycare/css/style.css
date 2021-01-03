@@ -1521,9 +1521,6 @@ body .btn:hover, body .btn:focus{
   }
 }
 @media screen and (max-width: 320px){
-  .utility{
-    display: block;
-  }
   .utility_hours{
     margin-bottom: 20px;
   }
