@@ -1,5 +1,6 @@
 :root{
-    --black: #181818;
+    --dark_black: #000;
+    --light_black: #181818;
     --grey_on_white: #b4b4be;
     --grey_on_black: #85858c;
     --accent_yellow: #f0e819;
@@ -46,10 +47,10 @@ html{
 body{
     font-family: 'Montserrat', var(--bs-font-sans-serif);
     letter-spacing: 0.15rem;
-    color: var(--black);
+    color: var(--light_black);
 }
 .header{
-    background-color: var(--black);
+    background-color: var(--light_black);
     padding: 2.4rem 0;
 }
 .profile{
@@ -76,7 +77,46 @@ body{
 .text span{
     font-weight: 600;
 }
-.price{
-    background-color: var(--black);
-    padding: 1.6rem 0 2.5rem;
+.price_and_size{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--grey_on_black);
+    background-color: var(--light_black);
+    margin-bottom: 3.2rem;
+    padding: 1.6rem;
+}
+.money{
+    font-size: 4.4rem;
+    letter-spacing: 0;
+    color: var(--bs-white);
+}
+.space{
+    font-size: 2rem;
+    line-height: 2.6rem;
+    color: var(--bs-white);
+    margin-right: 1.5rem;
+    padding: .5rem 1rem;
+}
+.space sup{
+    font-size: 70%;
+    top: -0.3em;
+}
+.trading_area{
+    font-weight: 500;
+    line-height: 2.2rem;
+    flex: 1;
+}
+.advantages{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.9rem;
+    letter-spacing: 0;
+    margin-bottom: 4.7rem;
+    color: var(--dark_black);
+}
+.advantages>:nth-child(n + 2){
+    margin-top: 2.4rem;
+}
+.advantages span{
+    margin-left: 1.4rem;
 }
