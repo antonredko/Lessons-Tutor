@@ -15,8 +15,9 @@
   --weight_bold: 700;
   --weight_black: 900;
   --border_radius: 40px;
+  --border_invis: 2px solid rgb(0 0 0/0);
   --shadow: 0px 16px 24px 0px rgb(38 38 38/20%);
-  --shadow_hover: 0px 16px 24px 0px rgb(0 0 0/40%);
+  --shadow_hover: 0px 16px 24px 0px rgb(0 0 0/20%);
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
   margin: 0;
@@ -152,7 +153,7 @@ body .btn:hover, body .btn:focus{
 }
 .utility_call{
   font-weight: var(--weight_medium);
-  border: 2px solid rgb(0 0 0/0);
+  border: var(--border_invis);
   transition: .3s;
 }
 .utility_call:hover, .utility_call:focus,
@@ -320,7 +321,7 @@ body .btn:hover, body .btn:focus{
   margin-left: 15px;
 }
 .burger, .search, .shopping_cart, .social a, .contacts a{
-  border: 2px solid rgb(0 0 0/0);
+  border: var(--border_invis);
   transition: .3s;
 }
 .shopping_cart{
@@ -889,34 +890,35 @@ body .btn:hover, body .btn:focus{
   width: 236px;
   font-weight: var(--weight_regular);
   line-height: 2rem;
+  display: flex;
 }
 .contacts_list li:nth-child(n + 2){
   margin-top: 16px;
 }
 .contacts_list li:last-child{
-  border: 2px solid rgb(0 0 0/0);
-  display: flex;
+  margin-left: 1px;
   align-items: center;
 }
 .contacts_list a{
-  width: 100%;
+  align-items: center;
 }
 .contacts_list .icon_before::before{
   width: 16px;
   height: 16px;
+  margin-right: 18px;
+}
+.contacts_list .location::before{
+  background-image: url("../img/icons/location.svg");
+  margin: 3px 20px 0 2.5px;
   align-self: flex-start;
-  margin: 2px 18px 0 2px;
 }
-.location::before{
-  background-image: url("../img/icons/location.svg"); 
-}
-.tel::before{
+.contacts_list .tel::before{
   background-image: url("../img/icons/smartphone.svg");
 }
-.mail::before{
+.contacts_list .mail::before{
   background-image: url("../img/icons/email.svg");
 }
-.hours::before{
+.contacts_list .hours::before{
   background-image: url("../img/icons/timer.svg");
 }
 .footer_bottom{
@@ -940,7 +942,7 @@ body .btn:hover, body .btn:focus{
   margin-left: 10px;
 }
 .privacy_and_terms a{
-  border: 2px solid rgb(0 0 0/0);
+  border: var(--border_invis);
   transition: .3s;
 }
 .privacy_and_terms a:focus{
