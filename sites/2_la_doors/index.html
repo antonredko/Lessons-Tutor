@@ -158,22 +158,17 @@
 <body>
     <header class="header">
         <div class="container py-4 d-flex justify-content-between">
-            <a class="align-items-center" href="#">
-                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button class="btn">
+                <!-- <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="20" height="2" fill="white" />
                     <rect y="7" width="20" height="2" fill="white" />
                     <rect y="14" width="20" height="2" fill="white" />
-                </svg>
-            </a>
+                </svg> -->
+            </button>
             <a class="align-items-center" href="index.html">
                 <img class="img-fluid" loading="lazy" src="img/logo.webp" alt="Логотип La Doors" width="118" height="32">
             </a>
-            <a class="profile btn rounded-circle justify-content-center align-items-center">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="6" cy="3" r="3" fill="#181818"/>
-                    <path d="M11 13C11.5523 13 12.0085 12.5492 11.9169 12.0046C11.842 11.5594 11.7169 11.123 11.5433 10.7039C11.2417 9.97595 10.7998 9.31451 10.2426 8.75736C9.68549 8.20021 9.02405 7.75825 8.2961 7.45672C7.56815 7.15519 6.78793 7 6 7C5.21207 7 4.43185 7.15519 3.7039 7.45672C2.97595 7.75825 2.31451 8.20021 1.75736 8.75736C1.20021 9.31451 0.758251 9.97595 0.456723 10.7039C0.283132 11.123 0.158042 11.5594 0.0831416 12.0046C-0.00848121 12.5492 0.447715 13 1 13L6 13H11Z" fill="#181818"/>
-                </svg>
-            </a>
+            <button class="profile btn rounded-circle d-flex justify-content-center align-items-center"></button>
         </div>
     </header>
     <main class="main text-center">
@@ -194,8 +189,7 @@
                     <span class="money lh-base">60 000 руб.</span>
                 </div>
                 <div class="d-flex align-items-center">
-                    <span
-                        class="space justify-content-center align-items-center position-relative lh-base">
+                    <span class="space justify-content-center align-items-center position-relative lh-base px-2 py-1 me-3">
                         1,82 м <sup>2</sup>
                         <svg class="position-absolute top-0 start-0" width="9" height="9"
                             viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,8 +199,7 @@
                             viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M-5.96046e-08 1H8V9" stroke="#85858C" stroke-width="2" />
                         </svg>
-                        <svg class="position-absolute bottom-0 start-0" width="9" height="9"
-                            viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="position-absolute bottom-0 start-0" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 8H1V-1.49012e-07" stroke="#85858C" stroke-width="2" />
                         </svg>
                         <svg class="position-absolute bottom-0 end-0" width="9" height="9"
@@ -215,67 +208,61 @@
                                 stroke-width="2" />
                         </svg>
                     </span>
-                    <span class="trading_area text-start">Всего занимает торговой
+                    <span class="trading_area text-start lh-sm">Всего занимает торговой
                         площади</span>
+                </div>
+            </div>
+            <div class="advantages text-start px-3 lh-base mb-5">
+                <div>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect y="11" width="11" height="11" fill="#F0E819" />
+                        <rect x="11" width="11" height="11" fill="#181818" />
+                    </svg>
+                    <p>Все реальные цвета</p>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex flex-column">
+                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.99911 10L7.94465e-08 4.4509e-07L16 -9.53674e-07L7.99911 10Z" fill="#181818" />
+                        </svg>
+                        <svg width="16" height="9" viewBox="0 0 16 9" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.99925 1.44574e-08L16 9L7.86805e-07 9L7.99925 1.44574e-08Z" fill="#F0E819" />
+                        </svg>
+                    </div>
+                    <p>Вся нужная информация</p>
+                </div>
+                <div class="mt-4">
+                    <div class="d-flex">
+                        <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-3.4969e-07 8.00002L13 3.85426e-07L13 16L-3.4969e-07 8.00002Z" fill="#181818" />
+                        </svg>
+                        <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 7.99998L-2.54292e-07 16L-9.53674e-07 5.68248e-07L13 7.99998Z" fill="#F0E819" />
+                        </svg>
+                    </div>
+                    <p>Эффектная Реклама</p>
+                </div>
+            </div>
+            <div class="stand_shapes lh-base px-3">
+                <p class="stand_shapes_title text-uppercase text-start mb-4">Трансформация промокуба</p>
+                <div class="stand_shapes_images d-flex">
+                    <div class="d-flex justify-content-center align-items-center col me-3 py-3">
+                        <img src="img/stand_shapes_1.webp" alt="Промокуб трансформируется в три грани" width="90" height="103">
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center col py-3">
+                        <img src="img/stand_shapes_2.webp" alt="Промокуб трансформируется в одну линию" width="83" height="104">
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <!-- <div class="price_and_size">
-        <div class="container">
-            
-        </div>
-    </div>
-    <div class="advantages text-start">
-        <div class="container">
-            <div>
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <rect y="11" width="11" height="11" fill="#F0E819" />
-                    <rect x="11" width="11" height="11" fill="#181818" />
-                </svg>
-                <p>Все реальные цвета</p>
-            </div>
-            <div>
-                <div class="d-flex flex-column">
-                    <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.99911 10L7.94465e-08 4.4509e-07L16 -9.53674e-07L7.99911 10Z" fill="#181818" />
-                    </svg>
-                    <svg width="16" height="9" viewBox="0 0 16 9" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.99925 1.44574e-08L16 9L7.86805e-07 9L7.99925 1.44574e-08Z" fill="#F0E819" />
-                    </svg>
-                </div>
-                <p>Вся нужная информация</p>
-            </div>
-            <div>
-                <div class="d-flex">
-                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M-3.4969e-07 8.00002L13 3.85426e-07L13 16L-3.4969e-07 8.00002Z" fill="#181818" />
-                    </svg>
-                    <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path d="M13 7.99998L-2.54292e-07 16L-9.53674e-07 5.68248e-07L13 7.99998Z" fill="#F0E819" />
-                    </svg>
-                </div>
-                <p>Эффектная Реклама</p>
-            </div>
-        </div>
-    </div>
-    <div class="stand_shapes">
-        <div class="container">
-            <p class="stand_shapes_title text-uppercase">Трансформация промокуба</p>
-            <div class="stand_shapes_images d-flex">
-                <div class="text-center col">
-                    <img src="img/stand_shapes_1.webp" alt="">
-                </div>
-                <div class="text-center col">
-                    <img src="img/stand_shapes_2.webp" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- 
+    
     <div class="promo_info">
         <div class="container">
             <h2 class="h2 text-center d-flex flex-column-reverse">

@@ -9,6 +9,8 @@
     --blue: #2d9cdb;
     --bs-gutter-x: 1rem;
     --two_rem: 2rem;
+    --weight_500: 500;
+    --weight_600: 600;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
     margin: 0;
@@ -50,12 +52,18 @@ body{
 .profile{
     background-color: var(--accent_yellow);
 }
+.profile::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-image: url('../img/profile.svg');
+}
 .main{
     margin-top: var(--two_rem);
 }
 .h1{
     line-height: var(--two_rem);
-    font-weight: 600;
+    font-weight: var(--weight_600);
 }
 .h1 span{
     color: var(--grey_on_white);
@@ -63,13 +71,12 @@ body{
 .text{
     margin-bottom: var(--two_rem);
     line-height: 20px;
-    font-weight: 400;
 }
 .text span{
-    font-weight: 600;
+    font-weight: var(--weight_600);
 }
 .price_and_size{
-    font-weight: 600;
+    font-weight: var(--weight_600);
     color: var(--grey_on_black);
     background-color: var(--light_black);
     margin-bottom: var(--two_rem);
@@ -90,41 +97,25 @@ body{
     top: -0.3em;
 }
 .trading_area{
-    font-weight: 500;
-    line-height: 2.2rem;
+    font-weight: var(--weight_500);
     flex: 1;
 }
 .advantages{
-    font-size: 2rem;
-    font-weight: 500;
-    line-height: 2.9rem;
-    letter-spacing: 0;
-    margin-bottom: 4.7rem;
+    font-size: 20px;
+    font-weight: var(--weight_500);
     color: var(--dark_black);
 }
-.advantages .container>:nth-child(n + 2){
-    margin-top: 2.4rem;
-}
 .advantages p{
-    margin-left: 1.4rem;
+    margin-left: 14px;
 }
 .stand_shapes{
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 2.2rem;
+    font-weight: var(--weight_600);
     letter-spacing: 0.02em;
-    margin-bottom: 7.2rem;
-}
-.stand_shapes_title{
-    margin-bottom: 2.4rem;
-}
-.stand_shapes_images>:nth-child(n + 2){
-    margin-left: 1.6rem;
+    margin-bottom: 72px;
 }
 .stand_shapes_images>*{
     border: 2px solid rgb(180 180 190/20%);
     border-radius: 2px;
-    padding: 1.4rem 0;
 }
 .h2{
     width: 80%;
@@ -134,10 +125,10 @@ body{
     line-height: 3.2rem;
 }
 .title_squares>span{
-    width: .6rem;
-    height: .6rem;
+    width: 6px;
+    height: 6px;
     background-color: var(--grey_on_white);
 }
 .title_squares>span:nth-child(n + 2){
-    margin-left: .9rem;
+    margin-left: 9px;
 }

@@ -15,7 +15,7 @@
   --weight_bold: 700;
   --weight_black: 900;
   --border_radius: 40px;
-  --border_invis: 2px solid rgb(0 0 0/0);
+  --border_transparent: 2px solid transparent;
   --shadow: 0px 16px 24px 0px rgb(38 38 38/20%);
   --shadow_hover: 0px 16px 24px 0px rgb(0 0 0/20%);
 }
@@ -153,7 +153,7 @@ body .btn:hover, body .btn:focus{
 }
 .utility_call{
   font-weight: var(--weight_medium);
-  border: var(--border_invis);
+  border: var(--border_transparent);
   transition: .3s;
 }
 .utility_call:hover, .utility_call:focus,
@@ -321,7 +321,7 @@ body .btn:hover, body .btn:focus{
   margin-left: 15px;
 }
 .burger, .search, .shopping_cart, .social a, .contacts a{
-  border: var(--border_invis);
+  border: var(--border_transparent);
   transition: .3s;
 }
 .shopping_cart{
@@ -942,7 +942,7 @@ body .btn:hover, body .btn:focus{
   margin-left: 10px;
 }
 .privacy_and_terms a{
-  border: var(--border_invis);
+  border: var(--border_transparent);
   transition: .3s;
 }
 .privacy_and_terms a:focus{
