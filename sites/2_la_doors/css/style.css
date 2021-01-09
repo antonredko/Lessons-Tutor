@@ -7,6 +7,8 @@
     --text_yellow: #e1d90d;
     --green: #00ac49;
     --blue: #2d9cdb;
+    --bs-gutter-x: 1rem;
+    --two_rem: 2rem;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
     margin: 0;
@@ -33,69 +35,55 @@ table{
     border-collapse: collapse;
     border-spacing: 0;
 }
-*, ::before, ::after{
-    box-sizing: border-box;
-}
 a, span, ::before, ::after{
     display: inline-flex;
     text-decoration: none;
     color: inherit;
 }
-html{
-    font-size: 10px;
-}
 body{
     font-family: 'Montserrat', var(--bs-font-sans-serif);
-    letter-spacing: 0.15rem;
     color: var(--light_black);
 }
 .header{
     background-color: var(--light_black);
-    padding: 2.4rem 0;
 }
 .profile{
     background-color: var(--accent_yellow);
-    padding: .9rem 1rem;
 }
-.ready_business{
-    margin-top: 3.2rem;
+.main{
+    margin-top: var(--two_rem);
 }
 .h1{
-    margin-bottom: 2.4rem;
-    font-size: 3rem;
-    line-height: 3.2rem;
+    line-height: var(--two_rem);
     font-weight: 600;
 }
 .h1 span{
     color: var(--grey_on_white);
 }
 .text{
-    margin-bottom: 3.2rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
+    margin-bottom: var(--two_rem);
+    line-height: 20px;
+    font-weight: 400;
 }
 .text span{
     font-weight: 600;
 }
 .price_and_size{
-    font-size: 1.6rem;
     font-weight: 600;
     color: var(--grey_on_black);
     background-color: var(--light_black);
-    margin-bottom: 3.2rem;
-    padding: 1.6rem;
+    margin-bottom: var(--two_rem);
+}
+.price>span:first-child{
+    letter-spacing: 0.06em;
 }
 .money{
-    font-size: 4.4rem;
-    letter-spacing: 0;
+    font-size: 44px;
     color: var(--bs-white);
 }
 .space{
-    font-size: 2rem;
-    line-height: 2.6rem;
+    font-size: 20px;
     color: var(--bs-white);
-    margin-right: 1.5rem;
-    padding: .5rem 1rem;
 }
 .space sup{
     font-size: 70%;
@@ -114,9 +102,42 @@ body{
     margin-bottom: 4.7rem;
     color: var(--dark_black);
 }
-.advantages>:nth-child(n + 2){
+.advantages .container>:nth-child(n + 2){
     margin-top: 2.4rem;
 }
-.advantages span{
+.advantages p{
     margin-left: 1.4rem;
+}
+.stand_shapes{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 7.2rem;
+}
+.stand_shapes_title{
+    margin-bottom: 2.4rem;
+}
+.stand_shapes_images>:nth-child(n + 2){
+    margin-left: 1.6rem;
+}
+.stand_shapes_images>*{
+    border: 2px solid rgb(180 180 190/20%);
+    border-radius: 2px;
+    padding: 1.4rem 0;
+}
+.h2{
+    width: 80%;
+    margin: 0 auto 4rem auto;
+    font-weight: 500;
+    font-size: 3.0rem;
+    line-height: 3.2rem;
+}
+.title_squares>span{
+    width: .6rem;
+    height: .6rem;
+    background-color: var(--grey_on_white);
+}
+.title_squares>span:nth-child(n + 2){
+    margin-left: .9rem;
 }
