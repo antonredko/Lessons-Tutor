@@ -158,17 +158,15 @@
 <body>
     <header class="header">
         <div class="container py-4 d-flex justify-content-between">
-            <button class="btn">
-                <!-- <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="20" height="2" fill="white" />
-                    <rect y="7" width="20" height="2" fill="white" />
-                    <rect y="14" width="20" height="2" fill="white" />
-                </svg> -->
+            <button class="burger btn d-flex justify-content-center align-items-center" aria-label="Кнопка вызова меню на мобильных телефонах">
+                <span class="burger_icon flex-column justify-content-between">
+                    <span></span>
+                </span>
             </button>
             <a class="align-items-center" href="index.html">
                 <img class="img-fluid" loading="lazy" src="img/logo.webp" alt="Логотип La Doors" width="118" height="32">
             </a>
-            <button class="profile btn rounded-circle d-flex justify-content-center align-items-center"></button>
+            <button class="profile btn rounded-circle d-flex justify-content-center align-items-center" aria-label="Кнопка открытия окна авторизации"></button>
         </div>
     </header>
     <main class="main text-center">
@@ -191,60 +189,33 @@
                 <div class="d-flex align-items-center">
                     <span class="space justify-content-center align-items-center position-relative lh-base px-2 py-1 me-3">
                         1,82 м <sup>2</sup>
-                        <svg class="position-absolute top-0 start-0" width="9" height="9"
-                            viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="position-absolute top-0 start-0" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 1H1V9" stroke="#85858C" stroke-width="2" />
                         </svg>
-                        <svg class="position-absolute top-0 end-0" width="9" height="9"
-                            viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="position-absolute top-0 end-0" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M-5.96046e-08 1H8V9" stroke="#85858C" stroke-width="2" />
                         </svg>
                         <svg class="position-absolute bottom-0 start-0" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 8H1V-1.49012e-07" stroke="#85858C" stroke-width="2" />
                         </svg>
-                        <svg class="position-absolute bottom-0 end-0" width="9" height="9"
-                            viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-5.96046e-08 8H8V-1.49012e-07" stroke="#85858C"
-                                stroke-width="2" />
+                        <svg class="position-absolute bottom-0 end-0" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-5.96046e-08 8H8V-1.49012e-07" stroke="#85858C" stroke-width="2" />
                         </svg>
                     </span>
-                    <span class="trading_area text-start lh-sm">Всего занимает торговой
-                        площади</span>
+                    <span class="trading_area text-start lh-sm">Всего занимает торговой площади</span>
                 </div>
             </div>
             <div class="advantages text-start px-3 lh-base mb-5">
                 <div>
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect y="11" width="11" height="11" fill="#F0E819" />
-                        <rect x="11" width="11" height="11" fill="#181818" />
-                    </svg>
+                    <div class="advantages_icon icon_all_colors"></div>
                     <p>Все реальные цвета</p>
                 </div>
                 <div class="mt-4">
-                    <div class="d-flex flex-column">
-                        <svg width="16" height="10" viewBox="0 0 16 10" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.99911 10L7.94465e-08 4.4509e-07L16 -9.53674e-07L7.99911 10Z" fill="#181818" />
-                        </svg>
-                        <svg width="16" height="9" viewBox="0 0 16 9" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.99925 1.44574e-08L16 9L7.86805e-07 9L7.99925 1.44574e-08Z" fill="#F0E819" />
-                        </svg>
-                    </div>
+                    <div class="advantages_icon icon_all_info d-flex flex-column"></div>
                     <p>Вся нужная информация</p>
                 </div>
                 <div class="mt-4">
-                    <div class="d-flex">
-                        <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M-3.4969e-07 8.00002L13 3.85426e-07L13 16L-3.4969e-07 8.00002Z" fill="#181818" />
-                        </svg>
-                        <svg width="13" height="16" viewBox="0 0 13 16" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 7.99998L-2.54292e-07 16L-9.53674e-07 5.68248e-07L13 7.99998Z" fill="#F0E819" />
-                        </svg>
-                    </div>
+                    <div class="advantages_icon icon_advertising d-flex"></div>
                     <p>Эффектная Реклама</p>
                 </div>
             </div>
@@ -259,20 +230,18 @@
                     </div>
                 </div>
             </div>
+            <div class="promo_info px-3">
+                <h2 class="h2 w-75 text-center mx-auto mb-5 d-flex flex-column-reverse">
+                    <div class="title_squares">
+                        <span class="me-2"></span>
+                        <span class="me-2"></span>
+                        <span></span>
+                    </div>
+                    Информация на промокубе
+                </h2>
+                <img class="img-fluid" src="img/promocube_2.webp" alt="Промокуб с информацией о дверях" width="271" height="326">
+            </div>
         </div>
     </main>
-    <!-- 
-    
-    <div class="promo_info">
-        <div class="container">
-            <h2 class="h2 text-center d-flex flex-column-reverse">
-                <div class="title_squares">
-                    <span></span><span></span><span></span>
-                </div>
-                Информация на промокубе
-            </h2>
-            <img class="img-fluid" src="img/promocube_2.webp" alt="">
-        </div>
-    </div> -->
 </body>
 </html>

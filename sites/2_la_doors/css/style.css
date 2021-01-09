@@ -11,6 +11,7 @@
     --two_rem: 2rem;
     --weight_500: 500;
     --weight_600: 600;
+    --transition: .3s;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
     margin: 0;
@@ -49,14 +50,51 @@ body{
 .header{
     background-color: var(--light_black);
 }
+.header :focus{
+    outline: 2px solid var(--accent_yellow);
+}
+.burger{
+    transition: var(--transition);
+}
+.burger:hover, .burger:focus{
+    background-color: var(--bs-white);
+}
+.burger_icon{
+  width: 20px;
+  height: 16px;
+}
+.burger_icon::before,
+.burger_icon::after{
+  content: "";
+}
+.burger_icon span,
+.burger_icon::before,
+.burger_icon::after{
+  width: 100%;
+  height: 2px;
+  background-color: var(--bs-white);
+  transition: var(--transition);
+}
+.burger:hover .burger_icon span,
+.burger:hover .burger_icon::before,
+.burger:hover .burger_icon::after,
+.burger:focus .burger_icon span,
+.burger:focus .burger_icon::before,
+.burger:focus .burger_icon::after{
+  background-color: var(--light_black);
+}
 .profile{
     background-color: var(--accent_yellow);
+    transition: var(--transition);
 }
 .profile::before{
     content: '';
     width: 12px;
     height: 12px;
-    background-image: url('../img/profile.svg');
+    background-image: url('../img/icons/profile.svg');
+}
+.profile:hover, .profile:focus{
+    background-color: var(--bs-white);
 }
 .main{
     margin-top: var(--two_rem);
@@ -105,6 +143,35 @@ body{
     font-weight: var(--weight_500);
     color: var(--dark_black);
 }
+.advantages_icon::before, .advantages_icon::after{
+    content: '';
+    background-repeat: no-repeat;
+}
+.icon_all_colors::before{
+    width: 22px;
+    height: 22px;
+    background-image: url('../img/icons/icon_all_colors.svg');
+}
+.icon_all_info::before{
+    width: 16px;
+    height: 10px;
+    background-image: url('../img/icons/icon_all_info_1.svg');
+}
+.icon_all_info::after{
+    width: 16px;
+    height: 9px;
+    background-image: url('../img/icons/icon_all_info_2.svg');
+}
+.icon_advertising::before{
+    width: 13px;
+    height: 16px;
+    background-image: url('../img/icons/icon_advertising_1.svg');
+}
+.icon_advertising::after{
+    width: 13px;
+    height: 16px;
+    background-image: url('../img/icons/icon_advertising_2.svg');
+}
 .advantages p{
     margin-left: 14px;
 }
@@ -118,17 +185,10 @@ body{
     border-radius: 2px;
 }
 .h2{
-    width: 80%;
-    margin: 0 auto 4rem auto;
-    font-weight: 500;
-    font-size: 3.0rem;
-    line-height: 3.2rem;
+    font-weight: var(--weight_500);
 }
 .title_squares>span{
     width: 6px;
     height: 6px;
     background-color: var(--grey_on_white);
-}
-.title_squares>span:nth-child(n + 2){
-    margin-left: 9px;
 }
