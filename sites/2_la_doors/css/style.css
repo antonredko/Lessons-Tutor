@@ -240,7 +240,6 @@ body{
     height: 18px;
     border-radius: 50%;
     background-color: var(--grey_on_black);
-    margin-right: 16px;
     font-size: 12px;
     font-weight: var(--weight_600);
     color: var(--dark_black);
