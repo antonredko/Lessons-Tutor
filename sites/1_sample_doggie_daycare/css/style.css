@@ -154,6 +154,7 @@ body .btn:hover, body .btn:focus{
 .utility_call{
   font-weight: var(--weight_medium);
   border: var(--border_transparent);
+  padding-right: 5px;
   transition: .3s;
 }
 .utility_call:hover, .utility_call:focus,
