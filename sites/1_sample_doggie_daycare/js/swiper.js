@@ -10,6 +10,9 @@ const slider = new Swiper('.slider_gallery', {
     grabCursor: true
 });
 const slider_services = new Swiper('.slider_services', {
+    lazy: {
+        loadPrevNext: true,
+    },
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets'

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" as="style">
     <link rel="preload" href="css/style.css" as="style">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <style>
         /* cyrillic-ext */
         @font-face {
@@ -170,22 +170,22 @@
             <button class="profile btn rounded-circle d-flex justify-content-center align-items-center" aria-label="Кнопка открытия окна авторизации"></button>
         </div>
     </header>
-    <main class="main text-center row">
+    <main class="main">
         <div class="container p-0">
-            <h1 class="h1 col-12 mb-4 px-3">
+            <h1 class="h1 col-12 mb-4 px-3 text-center">
                 Готовый бизнес
                 <span>с минимальными</span>
                 вложениями
             </h1>
-            <p class="text col-12 px-3">
+            <p class="text col-12 px-3 text-center">
                 Промокуб с образцами дверей от фабрики-производителя
                 <span>«a-LaDoors»</span>
             </p>
-            <img class="img-fluid px-3 col-12" loading="lazy" src="img/promocube.webp" alt="Промокуб с образцами дверей" width="305" height="305">
+            <img class="img-fluid col-12 px-3" loading="lazy" src="img/promocube.webp" alt="Промокуб с образцами дверей" width="375" height="370">
             <div class="price_and_size p-3">
-                <div class="price text-start d-flex flex-column">
-                    <span class="text-uppercase lh-base">Всего за</span>
-                    <span class="money lh-base">60 000 руб.</span>
+                <div class="price">
+                    <span class="col-12 text-uppercase lh-base">Всего за</span>
+                    <span class="money col-12 lh-base">60 000 руб.</span>
                 </div>
                 <div class="d-flex align-items-center">
                     <span class="space justify-content-center align-items-center position-relative lh-base px-2 py-1 me-3">
@@ -203,90 +203,210 @@
                             <path d="M-5.96046e-08 8H8V-1.49012e-07" stroke="#85858C" stroke-width="2" />
                         </svg>
                     </span>
-                    <span class="trading_area text-start lh-sm">Всего занимает торговой площади</span>
+                    <span class="trading_area lh-sm">Всего занимает торговой площади</span>
                 </div>
             </div>
-            <div class="advantages text-start px-3 lh-base mb-5">
-                <div>
+            <div class="advantages mb-5 px-3 lh-base">
+                <div class="col-12">
                     <div class="advantages_icon icon_all_colors"></div>
-                    <p>Все реальные цвета</p>
+                    <h3>Все реальные цвета</h3>
                 </div>
-                <div class="mt-4">
-                    <div class="advantages_icon icon_all_info d-flex flex-column"></div>
-                    <p>Вся нужная информация</p>
+                <div class="col-12 mt-4">
+                    <div class="advantages_icon icon_all_info"></div>
+                    <h3>Вся нужная информация</h3>
                 </div>
-                <div class="mt-4">
-                    <div class="advantages_icon icon_advertising d-flex"></div>
-                    <p>Эффектная Реклама</p>
+                <div class="col-12 mt-4">
+                    <div class="advantages_icon icon_advertising"></div>
+                    <h3>Эффектная Реклама</h3>
                 </div>
             </div>
             <div class="stand_shapes lh-base px-3">
-                <p class="stand_shapes_title text-uppercase text-start mb-4">Трансформация промокуба</p>
-                <div class="stand_shapes_images d-flex">
-                    <div class="d-flex justify-content-center align-items-center col me-3 py-3">
-                        <img loading="lazy" src="img/stand_shapes_1.webp" alt="Промокуб трансформируется в три грани" width="90" height="103">
-                    </div>
-                    <div class="d-flex justify-content-center align-items-center col py-3">
-                        <img loading="lazy" src="img/stand_shapes_2.webp" alt="Промокуб трансформируется в одну линию" width="83" height="104">
-                    </div>
+                <h4 class="stand_shapes_title col-12 text-uppercase mb-4">Трансформация промокуба</h4>
+                <div class="col-12 d-flex">
+                    <div class="stand_shapes_img stand_shapes_images_1 col me-3"></div>
+                    <div class="stand_shapes_img stand_shapes_images_2 col"></div>
                 </div>
             </div>
             <div class="promocube_info pb-5">
-                <div class="px-3">
-                    <h2 class="h2 w-75 text-center mx-auto mb-5 d-flex flex-column-reverse">
+                <div class="col-12 px-3">
+                    <h2 class="h2 w-75 text-center mx-auto mb-5 d-flex flex-column">
+                        Информация на промокубе
                         <div class="title_squares">
                             <span class="me-2"></span>
                             <span class="me-2"></span>
                             <span></span>
                         </div>
-                        Информация на промокубе
                     </h2>
-                    <img class="img-fluid" loading="lazy" src="img/promocube_2.webp" alt="Промокуб с информацией о дверях" width="271" height="326">
+                    <img class="img-fluid" loading="lazy" src="img/promocube_2.webp" alt="Промокуб с информацией о дверях" width="300" height="362">
                 </div>
-                <div class="promocube_price_tag px-3 py-4 text-start position-relative">
-                    <img class="ms-3 img-fluid" loading="lazy" src="img/l1_model.webp" alt="Это модель L1, реально 2195" width="111" height="170">
-                    <div class="swiper-container slider_price_tag lh-sm">
-                        <h3 class="h3 my-4">Спойлер-ценник</h3>
-                        <div class="swiper-wrapper mb-5">
-                            <ul class="swiper-slide">
-                                <li class="slider_price_tag_1 mb-4 d-flex">
-                                    <p class="ms-3 fs-6"><span>Основа:</span> пластик, пвх, 5 мм.</p>
-                                </li>
-                                <li class="slider_price_tag_2 mb-4 d-flex">
-                                    <p class="ms-3"><span>Покрытие:</span> пленка Avery 502 EM, плотная резка.</p>
-                                </li>
-                                <li class="slider_price_tag_3 d-flex">
-                                    <p class="ms-3"><span>Крепление:</span> скотч 3М, 0.6 мм</p>
-                                </li>
-                            </ul>
-                            <ul class="swiper-slide">
-                                <li class="slider_price_tag_4 mb-4 d-flex">
-                                    <p class="ms-3"><span>Основа:</span> пластик, пвх, 5 мм.</p>
-                                </li>
-                                <li class="slider_price_tag_5 mb-4 d-flex">
-                                    <p class="ms-3"><span>Покрытие:</span> пленка Avery 502 EM, плотная резка.</p>
-                                </li>
-                                <li class="slider_price_tag_6 d-flex">
-                                    <p class="ms-3"><span>Крепление:</span> скотч 3М, 0.6 мм</p>
-                                </li>
-                            </ul>
-                            <ul class="swiper-slide">
-                                <li class="slider_price_tag_7 mb-4 d-flex">
-                                    <p class="ms-3"><span>Основа:</span> пластик, пвх, 5 мм.</p>
-                                </li>
-                                <li class="slider_price_tag_8 mb-4 d-flex">
-                                    <p class="ms-3"><span>Покрытие:</span> пленка Avery 502 EM, плотная резка.</p>
-                                </li>
-                                <li class="slider_price_tag_9 d-flex">
-                                    <p class="ms-3"><span>Крепление:</span> скотч 3М, 0.6 мм</p>
-                                </li>
-                            </ul>
+                <div class="col-12">
+                    <div class="promocube_price_tag px-3 py-4 text-start position-relative">
+                        <div class="promocube_price_tag_img ms-3 col-6"></div>
+                        <div class="swiper-container slider_price_tag lh-sm">
+                            <h3 class="h3 my-4">Спойлер-ценник</h3>
+                            <div class="swiper-wrapper mb-5">
+                                <ul class="swiper-slide">
+                                    <li class="slider_price_tag_1 mb-4 d-flex">
+                                        <p class="ms-3 fs-6"><span>Основа:</span> пластик, пвх, 5 мм.</p>
+                                    </li>
+                                    <li class="slider_price_tag_2 mb-4 d-flex">
+                                        <p class="ms-3"><span>Покрытие:</span> пленка Avery 502 EM, плотная резка.</p>
+                                    </li>
+                                    <li class="slider_price_tag_3 d-flex">
+                                        <p class="ms-3"><span>Крепление:</span> скотч 3М, 0.6 мм</p>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li class="slider_price_tag_4 mb-4 d-flex">
+                                        <p class="ms-3"><span>Основа:</span> пластик, пвх, 5 мм.</p>
+                                    </li>
+                                    <li class="slider_price_tag_5 mb-4 d-flex">
+                                        <p class="ms-3"><span>Покрытие:</span> пленка Avery 502 EM, плотная резка.</p>
+                                    </li>
+                                    <li class="slider_price_tag_6 d-flex">
+                                        <p class="ms-3"><span>Крепление:</span> скотч 3М, 0.6 мм</p>
+                                    </li>
+                                </ul>
+                                <ul class="swiper-slide">
+                                    <li class="slider_price_tag_7 mb-4 d-flex">
+                                        <p class="ms-3"><span>Основа:</span> пластик, пвх, 5 мм.</p>
+                                    </li>
+                                    <li class="slider_price_tag_8 mb-4 d-flex">
+                                        <p class="ms-3"><span>Покрытие:</span> пленка Avery 502 EM, плотная резка.</p>
+                                    </li>
+                                    <li class="slider_price_tag_9 d-flex">
+                                        <p class="ms-3"><span>Крепление:</span> скотч 3М, 0.6 мм</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="promocube_desc px-3 pt-3 lh-sm d-flex">
+                        <p>Стоимость дверей указана условная, для примера. Не является основанием для расчета.</p>
                     </div>
                 </div>
-                <div class="promocube_desc text-start px-3 pt-3 lh-sm d-flex">
-                    <p>Стоимость дверей указана условная, для примера. Не является основанием для расчета.</p>
+            </div>
+            <div class="door_samples col-12 px-3 pt-5 pb-3">
+                <h2 class="h2 text-center mb-5 d-flex flex-column">
+                    Образцы дверей
+                    <div class="title_squares">
+                        <span class="me-2"></span>
+                        <span class="me-2"></span>
+                        <span></span>
+                    </div>
+                </h2>
+                <div class="col-12">
+                    <div class="l_serie col-12 mb-5 px-3"></div>
+                    <div class="door_samples_desc lh-base mb-5">
+                        <p class="d-flex flex-column">В качестве образцов <span class="lh-1">предоставляем 8 самых</span> популярных моделей дверей.</p>
+                        <p><span>Помимо качества</span> предлагаем различный дизайн, большое количество расцветок, видов покрытия и пленок.</p>
+                    </div>
+                </div>
+                <div class="swiper-container slider_door_samples lh-lg">
+                    <div class="swiper-wrapper mb-5">
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_dark_nut.webp" alt="Пример двери из дерева цвета Темный орех без стекла" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="dark_nut">Темный орех</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_latte.webp" alt="Пример двери из дерева цвета Латте" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="latte">Латте</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_brandy.webp" alt="Пример двери из дерева цвета Брэнди" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="brandy">Брэнди</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_dark_nut_2.webp" alt="Пример двери из дерева цвета Темный орех с матовым стеклом" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="dark_nut">Темный орех</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_french_oak.webp" alt="Пример двери из дерева цвета Французский дуб" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="french_oak">Французский дуб</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_milanese_nut.webp" alt="Пример двери из дерева цвета Миланский орех с матовым стеклом" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="milan_nut">Миланский орех</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_macadamia_nut.webp" alt="Пример двери из дерева цвета Орех макадамия с матовым стеклом" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="macad_nut">Орех макадамия</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="text-center">
+                                <img src="img/door_italian_nut.webp" alt="Пример двери из дерева цвета Итальянский орех с матовым стеклом" width="166" height="247">
+                                <div class="door_title position-relative mx-auto">
+                                    <h6 class="ital_nut">Итальянский орех</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination text-center"></div>
+                </div>
+            </div>
+            <div class="coating col-12 px-3 py-5">
+                <h2 class="h2 text-center mb-5 d-flex flex-column">
+                    Покрытия
+                    <div class="title_squares">
+                        <span class="me-2"></span>
+                        <span class="me-2"></span>
+                        <span></span>
+                    </div>
+                </h2>
+                <div class="col-12 d-flex flex-column">
+                    <div class="two_materials_img col-12 mb-5 px-3"></div>
+                    <div class="col-12">
+                        <div class="coating_item col-12 p-4 mb-4">
+                            <h3 class="h3 mb-3 d-flex align-items-center finish_film">Финиш-пленка</h3>
+                            <p class="text mb-0">Cовременный облицовочный материал, в основе которого специальная бумага, пропитанная смолами и покрытая защитным лаком.</p>
+                        </div>
+                        <div class="coating_item col-12 p-4">
+                            <h3 class="h3 mb-3 d-flex align-items-center pvc_film">ПВХ-пленка</h3>
+                            <p class="text mb-0">Полимерная пленка, которой облицовывают полотно, для придания ему эстетичного внешнего вида. ПВХ пленка защищает материал основы от воздействия влаги.  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colors col-12 px-3 pt-5 pb-4">
+                <h2 class="h2 text-center mb-5 d-flex flex-column">
+                    Расцветки
+                    <div class="title_squares">
+                        <span class="me-2"></span>
+                        <span class="me-2"></span>
+                        <span></span>
+                    </div>
+                </h2>
+                <div class="col-12">
+                    <div class="eight_colors_img col-12 mb-5 px-3"></div>
                 </div>
             </div>
         </div>
