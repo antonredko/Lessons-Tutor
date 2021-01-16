@@ -313,7 +313,6 @@ body{
     margin-left: -5px;
 }
 .wave_item{
-    width: 10px;
     height: 3px;
     background-color: var(--grey_on_white);
 }
