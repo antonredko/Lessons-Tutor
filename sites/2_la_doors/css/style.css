@@ -308,6 +308,7 @@ body{
 .wave{
     width: 53px;
     height: 10px;
+    margin-bottom: 19px;
 }
 .wave>:nth-child(n + 2){
     margin-left: -5px;
