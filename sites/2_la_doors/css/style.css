@@ -306,22 +306,9 @@ body{
     background-color: rgb(180 180 190/50%);
 }
 .wave{
-    width: 53px;
-    height: 10px;
+    height: 7px;
     margin-bottom: 19px;
-}
-.wave>:nth-child(n + 2){
-    margin-left: -5px;
-}
-.wave_item{
-    height: 3px;
-    background-color: var(--grey_on_white);
-}
-.wave_ltr{
-    transform: rotate(45deg);
-}
-.wave_rtl{
-    transform: rotate(-45deg);
+    background: url('../img/wave.webp') no-repeat 0 0/contain; 
 }
 .slider_door_samples{
     font-weight: var(--weight_500);
