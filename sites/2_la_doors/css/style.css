@@ -8,7 +8,7 @@
     --green: #00ac49;
     --blue: #2d9cdb;
     --background_grey: rgb(180 180 190/14%);
-    --border_grey: 2px solid rgb(180 180 190/20%);
+    /* --border_grey: 2px solid rgb(180 180 190/20%); */
     --bs-gutter-x: 1rem;
     --two_rem: 2rem;
     --weight_500: 500;
@@ -134,16 +134,31 @@ body{
     font-size: 20px;
     color: var(--bs-white);
 }
-.space::before{
-    content: url('data:image/svg+xml; base64, ../img/icons/size_top.svg');
-    width: 100%;
+.space_quotes{
+    width: calc(100% + 18px);
     height: 9px;
-    /* background: url('../img/icons/size_top.svg') no-repeat; */
-    /* position: absolute; */
+}
+.space_quotes::before, .space_quotes::after{
+    content: '';
+    width: 9px;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.space_quotes_top::before{
+    background-image: url('../img/icons/space_quotes_top_left.svg');
+}
+.space_quotes_top::after{
+    background-image: url('../img/icons/space_quotes_top_right.svg');
+}
+.space_quotes_bottom::before{
+    background-image: url('../img/icons/space_quotes_bottom_left.svg');
+}
+.space_quotes_bottom::after{
+    background-image: url('../img/icons/space_quotes_bottom_right.svg');
 }
 .space sup{
     font-size: 70%;
-    top: -0.3em;
 }
 .trading_area{
     font-weight: var(--weight_500);
@@ -154,7 +169,7 @@ body{
     font-weight: var(--weight_500);
     color: var(--dark_black);
 }
-.advantages_icon::before, .advantages_icon::after{
+.advantages_item::before{
     content: '';
     background-repeat: no-repeat;
 }
@@ -164,46 +179,19 @@ body{
     background-image: url('../img/icons/icon_all_colors.svg');
 }
 .icon_all_info::before{
-    display: block;
     width: 16px;
-    height: 10px;
-    background-image: url('../img/icons/icon_all_info_1.svg');
-}
-.icon_all_info::after{
-    display: block;
-    width: 16px;
-    height: 9px;
-    background-image: url('../img/icons/icon_all_info_2.svg');
+    height: 19px;
+    background-image: url('../img/icons/icon_all_info.svg');
 }
 .icon_advertising::before{
-    width: 13px;
+    width: 26px;
     height: 16px;
-    background-image: url('../img/icons/icon_advertising_1.svg');
-}
-.icon_advertising::after{
-    width: 13px;
-    height: 16px;
-    background-image: url('../img/icons/icon_advertising_2.svg');
-}
-.advantages h3{
-    margin-left: 14px;
+    background-image: url('../img/icons/icon_advertising.svg');
 }
 .stand_shapes{
     font-weight: var(--weight_600);
     letter-spacing: 0.02em;
     margin-bottom: 72px;
-}
-.stand_shapes_img{
-    width: 136px;
-    height: 136px;
-    border: var(--border_grey);
-    border-radius: 2px;
-}
-.stand_shapes_images_1{
-    background: url('../img/stand_shapes_1.webp') no-repeat 50%/90px 104px;
-}
-.stand_shapes_images_2{
-    background: url('../img/stand_shapes_2.webp') no-repeat 50%/83px 104px;
 }
 .h2{
     font-weight: var(--weight_500);
