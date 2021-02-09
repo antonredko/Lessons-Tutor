@@ -57,45 +57,9 @@ body{
 .header :focus{
     outline: 2px solid var(--accent_yellow);
 }
-.burger{
-    transition: var(--transition);
-}
-.burger:hover, .burger:focus{
-    background-color: var(--bs-white);
-}
-.burger_icon{
-  width: 20px;
-  height: 16px;
-}
-.burger_icon::before,
-.burger_icon::after{
-  content: "";
-}
-.burger_icon span,
-.burger_icon::before,
-.burger_icon::after{
-  width: 100%;
-  height: 2px;
-  background-color: var(--bs-white);
-  transition: var(--transition);
-}
-.burger:hover .burger_icon span,
-.burger:hover .burger_icon::before,
-.burger:hover .burger_icon::after,
-.burger:focus .burger_icon span,
-.burger:focus .burger_icon::before,
-.burger:focus .burger_icon::after{
-  background-color: var(--light_black);
-}
 .profile{
     background-color: var(--accent_yellow);
     transition: var(--transition);
-}
-.profile::before{
-    content: '';
-    width: 12px;
-    height: 12px;
-    background-image: url('../img/icons/profile.svg');
 }
 .profile:hover, .profile:focus{
     background-color: var(--bs-white);
@@ -218,8 +182,8 @@ body{
     margin-left: -30px;
 }
 .promocube_price_tag_img{
-    height: 170px;
-    background: url('../img/l1_model.webp') no-repeat 50%/contain;
+    width: 110px;
+    height: auto;
 }
 .promocube_price_tag .h3{
     color: var(--bs-white);
@@ -239,24 +203,6 @@ body{
 }
 .slider_price_tag_3::before{
     content: '3';
-}
-.slider_price_tag_4::before{
-    content: '4';
-}
-.slider_price_tag_5::before{
-    content: '5';
-}
-.slider_price_tag_6::before{
-    content: '6';
-}
-.slider_price_tag_7::before{
-    content: '7';
-}
-.slider_price_tag_8::before{
-    content: '8';
-}
-.slider_price_tag_9::before{
-    content: '9';
 }
 .slider_price_tag li::before{
     width: 18px;
