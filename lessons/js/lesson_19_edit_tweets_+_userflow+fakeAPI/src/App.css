@@ -1,0 +1,156 @@
+.container{
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+  display: flex;
+}
+.navbar{
+  margin-right: 20px;
+  position: relative;
+}
+.navbar ul{
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  position: sticky;
+  top: 20px;
+  left: 0;
+}
+.navbar li:nth-child(n + 2){
+  margin-top: 5px;
+}
+.navbar a{
+  width: 100%;
+  padding: 5px 10px;
+  transition: .3s;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.navbar a:hover, .navbar a.active{
+  color: #ff0000;
+  border: 1px solid #ff0000;
+}
+.content{
+  flex: 1;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.page-title{
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.tweet{
+  background-color: #fff;
+  border-radius: 5px;
+}
+.tweet:not(:last-child){
+  margin-bottom: 20px;
+}
+.tweet-header{
+  padding: 5px 10px;
+  border-bottom: 1px solid #a4a4a4;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.tweet-author-photo{
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.tweet-text{
+  padding: 10px;
+  text-align: justify;
+}
+.tweet button{
+  color: #a4a4a4;
+  background: none;
+}
+.tweet-actions{
+  padding: 5px 10px;
+}
+.tweet-actions button{
+  border: 1px solid #a4a4a4;
+  border-radius: 3px;
+}
+.tweet-actions button:hover{
+  color: #009dff;
+  border: 1px solid #009dff;
+}
+.tweet-actions button:nth-child(n+2){
+  margin-left: 10px;
+}
+.tweet-footer{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #a4a4a4;
+  color: #a4a4a4;
+}
+.tweet-like{
+  font-size: 22px;
+  border: none;
+}
+.tweet-like span{
+  transition: .3s;
+}
+.tweet-like:hover span{
+  color: #009dff;
+}
+.liked{
+  color: #ff0000;
+}
+.unliked{
+  color: #a4a4a4;
+}
+.tweet-date{
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.tweet-form{
+  display: flex;
+  flex-direction: column;
+}
+.tweet-form input, .tweet-form textarea{
+  border: 1px solid #a4a4a4;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+.tweet-form textarea::placeholder, .tweet-form input::placeholder{
+  transition: .3s;
+}
+.tweet-form textarea:focus::placeholder, .tweet-form input:focus::placeholder{
+  opacity: 0;
+  transform: translateX(20px);
+}
+.tweet-form-actions button{
+  background: none;
+  padding: 5px 10px;
+}
+.tweet-form-actions button[type="reset"]{
+  border: 1px solid #a4a4a4;
+  border-radius: 3px;
+  color: #a4a4a4;
+}
+.tweet-form-actions button[type="reset"]:hover{
+  color: #009dff;
+  border: 1px solid #009dff;
+}
+.tweet-form-actions button[type="submit"]{
+  border: 2px solid #009dff;
+  border-radius: 5px;
+  color: #009dff;
+  font-weight: 700;
+}
+.tweet-form-actions button[type="submit"]:hover{
+  color: #fff;
+  background: #009dff;
+}
+.tweet-form-actions button:nth-child(n+2){
+  margin-left: 10px;
+}
